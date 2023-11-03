@@ -4,11 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A tej csodái!</title>
-    </head>
-  <body>
+    <style>
+      p {
+        font-size: 15px;
+        color: #222222;
+      }
+      .important {
+        color: #ce1b1b;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-thickness: 5px;
+        text-decoration-skip-ink: none;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 2px black;
+      }
+      h1 {
+        color: aqua;
+        background-color: black;
+        text-align: center;
+        text-shadow: 0px 0px 15px aqua;
+      }
+      h2 {
+        text-decoration: underline;
+      }
+      .sign {
+        color: #444444;
+        font-style: italic;
+      }
+      nav {
+        text-align: center;
+      }
+      .grayBack{
+        background-color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body> 
     <a id="oldal-teteje"></a>
     <header>
-      <h1 style="color: aqua; background-color: black">A TEJ</h1>
+      <!-- <h1 style="color: aqua; background-color: black">A TEJ</h1> -->
+      <h1>A TEJ</h1>
     </header>
     <nav>
       <a href="#oldal-alja">Ugorjunk a végére!</a>
@@ -18,11 +58,11 @@
       <a href="#oldal-navigacio-homogenizalas">Homogenizálás</a>
     </nav>
     <hr />
-    <p>
+    <p class="important">
       A legújabb magyar táplálkozási ajánlás szerint naponta fél liter tejet
-      vagy ennek megfelelő tejterméket javasolt fogyasztani. De melyik tejet
-      igyuk, és mit jelentenek a különböző jelzések a tejesdobozokon? Ebben
-      segítünk!
+      vagy ennek megfelelő tejterméket javasolt fogyasztani. <br />
+      De melyik tejet igyuk, és mit jelentenek a különböző jelzések a
+      tejesdobozokon? Ebben segítünk!
     </p>
     <div>
       A tejben és tejtermékekben számos értékes tápanyag – fehérjék, zsírok,
@@ -48,7 +88,7 @@
       esetleges összetapadásukat (fölöződés). Homogenizálás következtében a
       termék könnyebben emészthetővé is válik.
     </div>
-    <div>
+    <div class="grayBack">
       <a id="oldal-navigacio-tartosito"></a>
       <h2>Tartósító eljárások</h2>
       <h3>Nyers tej</h3>
@@ -120,9 +160,9 @@
       megmarad.
     </p>
     <p>PR teszt</p>
-     <footer>
+    <footer>
       <hr />
-      <div>Készítette: Kupás Norbert</div>
+      <div class="sign">Készítette: Kupás Norbert</div>
       <br /><br />
       <a href="#oldal-teteje">Vissza az oldal elejére!</a>
     </footer>
