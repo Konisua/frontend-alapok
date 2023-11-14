@@ -14,7 +14,7 @@ div {
 }
 p {
   font-size: 15px;
-  font-family: 'Times New Roman', Times, serif,;
+  font-family: "Times New Roman", Times, serif;
   line-height: 120%;
   margin-block-start: 20px;
   margin-block-end: 0px;
@@ -24,7 +24,10 @@ a:visited {
   color: #003b63;
 }
 a:hover {
-  color: #ce1b1b;
+  color: #700b0b;
+  text-decoration: none;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .invert-background-color {
   backdrop-filter: invert(1);
@@ -32,8 +35,12 @@ a:hover {
 .invert-color {
   filter: invert(1);
 }
+.transition-hover:hover {
+  transition: 0.8s;
+  transition-timing-function: ease-in-out;
+}
 .important {
-  color: #ce1b1b;
+  color: #c77878;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
@@ -47,9 +54,7 @@ a:hover {
   text-shadow: 1px 1px 2px black;
 }
 h1 {
-  color: aqua;
   text-align: center;
-  text-shadow: 0px 0px 15px aqua;
 }
 .margin-right {
   margin-right: 200px;
@@ -61,8 +66,9 @@ h1 {
   margin-top: -205px;
 }
 .rounded {
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: black;
+  border: solid;
 }
 .design-menu {
   margin-top: 10px;
@@ -76,16 +82,40 @@ h1 {
   background: transparent url(box01.svg) no-repeat;
   background-size: cover;
 }
+.design-line-left {
+  margin-right: 0;
+  display: block;
+  top: 55px;
+  right: 122px;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  z-index: -1;
+}
+.design-line-left-2 {
+  margin-right: 0;
+  display: block;
+  top: 100%;
+  right: 122px;
+  width: 20px;
+  height: 100%;
+  position: sticky;
+  background-color: black;
+  z-index: -1;
+}
 ul {
   list-style-type: disclosure-closed;
   list-style-position: outside;
-  background-color: rgba(33, 33, 33, 50%);
   padding-left: 17px;
   height: 147px;
+  color: black;
+  text-transform: uppercase;
 }
 li {
   font-weight: bold;
-  line-height: 20px;
+  line-height: 18px;
+  font-size: 10pt;
 }
 h2 {
   margin-top: 1em;
@@ -107,7 +137,7 @@ nav {
   padding: 26px;
 }
 body {
-  background-color: #333333;
+  background-color: #222222;
   color: #dddddd;
   margin-left: 5%;
   margin-right: 5%;
