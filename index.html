@@ -190,6 +190,74 @@
         lehet is enni az igazi házi túrót!
       </p>
     </div>
+    <div class="wrapper-image-form">
+      <img src="tej01.jpg" alt="Tejek képe 1" />
+      <img src="tej02.jpg" alt="Tejek képe 2" />
+      <div class="design-form">
+        <form
+          action=""
+          name="cikk-kuldese-ismerosnek"
+          onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')"
+        >
+          <h4>Cikk küldése ismerősnek!</h4>
+          <div>
+            <label for="name-input">Név:</label>
+            <input
+              type="text"
+              name="name"
+              id="name-input"
+              placeholder="pl: Jakab pista"
+              required
+              minlength="4"
+            />
+          </div>
+          <div>
+            <label for="phonenumber-input">Telszám:</label>
+            <input
+              type="tel"
+              name="phonenumber"
+              id="phonenumber-input"
+              placeholder="+36102345678"
+            />
+          </div>
+          <div>
+            <label for="email-input">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email-input"
+              placeholder="valaki@valami.hu"
+              required
+            />
+          </div>
+          <div>
+            <label for="age-input">Kora:</label>
+            <input
+              type="number"
+              name="age"
+              id="age-input"
+              min="0"
+              max="120"
+              placeholder="min:0 - max:120"
+            />
+          </div>
+          <div>
+            <label for="age-input">Üzenet:</label>
+            <input
+              type="text"
+              name="message"
+              id="message-input"
+              aria-multiline="true"
+              placeholder="Üzenet szövege"
+            />
+          </div>
+
+          <div>
+            <button type="submit">Elküld</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <footer class="no-margin-right invert-background-color">
       <hr class="no-margin-right" />
       <div class="sign no-margin-right invert-color">
@@ -197,6 +265,5 @@
       </div>
     </footer>
     <a id="oldal-alja"></a>
-    
-    </body>
+  </body>
 </html>
