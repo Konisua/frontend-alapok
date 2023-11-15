@@ -171,8 +171,13 @@ img {
   border: solid 4px;
     border-radius: 4px;
     width: 300px;
-    height: 185px;
+    height: 210px;
     margin-right: 0px;
     margin-left: auto;
     padding: 2px;
+}
+.design-textarea {
+  width: 220px;
+  height: 3em;
+  resize: none;
 }
