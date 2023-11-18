@@ -9,9 +9,6 @@ hr {
   border: none;
   border-top: 2px solid black;
 }
-header {
-  margin-top: 1%;
-}
 div {
   margin-right: 200px;
 }
@@ -81,8 +78,8 @@ nav {
 body {
   background-color: #222222;
   color: #dddddd;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 form > div {
@@ -91,13 +88,13 @@ form > div {
   margin-bottom: 6px;
 }
 div > input {
-width: 220px;
+  width: 220px;
 }
 label {
   display: inline-block;
   width: 60px;
 }
-button{
+button {
   height: 30px;
   width: 120px;
   margin-left: 90px;
@@ -169,15 +166,26 @@ img {
 
 .design-form {
   border: solid 4px;
-    border-radius: 4px;
-    width: 300px;
-    height: 210px;
-    margin-right: 0px;
-    margin-left: auto;
-    padding: 2px;
+  border-radius: 4px;
+  width: 300px;
+  height: 210px;
+  margin-right: 0px;
+  margin-left: auto;
+  padding: 2px;
+  background-color: #222222;
 }
 .design-textarea {
   width: 220px;
   height: 3em;
   resize: none;
+}
+.vertical-line {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 163px;
+  right: 18px;
+  border-left: 10px double black;
+  border-right: 10px double black;
+  z-index: -2;
 }
