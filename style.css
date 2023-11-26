@@ -2,14 +2,15 @@
   margin: 0;
   padding: 0;
 }
-
+/* nagy méret 900px felett */
 @media screen and (min-width: 900px) {
   .margin-right-media-changed {
     margin-right: 200px;
   }
   .wrapper-image-form {
-    display: block;
+    display: flex;
     margin-top: 20px;
+    margin-right: 0px;
       }
   .design-menu {
     margin-top: 10px;
