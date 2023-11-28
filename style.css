@@ -2,16 +2,19 @@
   margin: 0;
   padding: 0;
 }
-/* nagy méret 900px felett */
-@media screen and (min-width: 900px) {
+/* nagy méret 1080px felett */
+@media screen and (min-width: 1080px) {
   .margin-right-media-changed {
     margin-right: 200px;
   }
   .wrapper-image-form {
     display: flex;
-    margin-top: 20px;
-    margin-right: 0px;
-      }
+    gap: 1em;
+    flex-direction: row;
+    margin-top: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+  }
   .design-menu {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -44,22 +47,23 @@
     text-align: left;
     padding: 26px;
   }
-  
-  }
-  .image-container {
-    display: flex;
-    justify-content: space-evenly;
+}
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-/* kicsi 900px alatti képméret */
-@media screen and (max-width: 900px) {
+/* kicsi 1079px alatti képméret */
+@media screen and (max-width: 1079px) {
   .margin-right-media-changed {
     margin-right: 0px;
   }
   .wrapper-image-form {
-    display: block;
-    margin-top: 20px;
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
   }
   .design-menu {
     margin-top: 2px;
@@ -67,19 +71,20 @@
     position: sticky;
     background-color: black;
     top: 0px;
-}  
+    padding: 2px;
+  }
   ul {
     list-style-type: none;
     max-height: 56px;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   li {
     font-weight: bold;
-    line-height: 18px;
-    font-size: 11pt;
-    height: fit-content;
+    line-height: 1.1em;
+    font-size: 1em;
     padding: 10px 4px;
     text-align: center;
   }
@@ -175,8 +180,10 @@ button {
   width: 120px;
   margin-left: 90px;
 }
-img {
+
+.design-form-images {
   margin: auto;
+  border: solid #dddddd 4px;
 }
 .invert-background-color {
   backdrop-filter: invert(1);
@@ -194,7 +201,7 @@ img {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 40px;
+  line-height: 1.5em;
   text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 5px;
@@ -226,16 +233,14 @@ img {
 }
 
 .design-form {
-    border: solid 4px;
-    border-radius: 4px;
-    width: 300px;
-    height: 210px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #222222;
-    padding: 2px;
-  }
+  border: solid 4px;
+  border-radius: 4px;
+  width: 300px;
+  height: 210px;
+  background-color: #222222;
+  padding: 2px;
+  white-space: nowrap;
+}
 .design-textarea {
   width: 220px;
   height: 3em;
