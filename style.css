@@ -2,17 +2,20 @@
   margin: 0;
   padding: 0;
 }
+
 .not-compatible-size {
   visibility: hidden;
   position: absolute;
-  margin: auto;
+  font-weight: bold;
 }
+
 /* nagy méret 1080px felett */
 
 @media screen and (min-width: 1080px) {
   .margin-right-media-changed {
     margin-right: 200px;
   }
+
   .wrapper-image-form {
     display: flex;
     gap: 1em;
@@ -21,6 +24,7 @@
     justify-content: space-evenly;
     align-items: center;
   }
+
   .design-menu {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -33,6 +37,7 @@
     background: transparent url(box01.svg) no-repeat;
     background-size: cover;
   }
+
   ul {
     list-style-type: disclosure-closed;
     list-style-position: outside;
@@ -41,23 +46,25 @@
     color: black;
     text-transform: uppercase;
   }
+
   li {
     font-weight: bold;
     line-height: 16px;
     font-size: 10pt;
   }
+
   .margin-pullback {
     margin-top: -205px;
     visibility: hidden;
   }
+
   nav {
     text-align: left;
     padding: 26px;
   }
-  h1 {
-    padding-left: 122px;
-  }
+
 }
+
 .image-container {
   display: flex;
   justify-content: space-evenly;
@@ -68,6 +75,7 @@
   .margin-right-media-changed {
     margin-right: 0px;
   }
+
   .wrapper-image-form {
     display: flex;
     flex-wrap: wrap;
@@ -75,6 +83,7 @@
     justify-content: center;
     margin-top: 1em;
   }
+
   .design-menu {
     margin-top: 2px;
     border-style: solid;
@@ -83,6 +92,7 @@
     top: 0px;
     padding: 2px;
   }
+
   ul {
     list-style-type: none;
     max-height: 56px;
@@ -91,6 +101,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   li {
     font-weight: bold;
     line-height: 1.1em;
@@ -98,45 +109,49 @@
     padding: 10px 4px;
     text-align: center;
   }
+
   .margin-pullback {
     margin-top: -20px;
     visibility: hidden;
   }
+
   nav {
     text-align: left;
     padding: 0;
   }
+
   .vertical-line {
     visibility: hidden;
   }
+
   .image-container {
     display: flex;
     justify-content: space-evenly;
   }
-  h1 {
-    padding-left: 122px;
-  }
+
 }
+
 @media screen and (max-width: 680px) {
   ul {
     max-height: none;
     flex-direction: column;
   }
-  h1 {
-    padding-left: 0;
-  }
+
   li {
     padding: 0;
   }
 }
+
 @media screen and (max-width: 359px) {
   * {
     visibility: hidden;
   }
+
   .not-compatible-size {
     visibility: visible;
   }
 }
+
 hr {
   margin-block-start: 10px;
   margin-block-end: 10px;
@@ -152,10 +167,12 @@ p {
   margin-block-start: 20px;
   margin-block-end: 0px;
 }
+
 a:link,
 a:visited {
   color: #005090;
 }
+
 a:hover {
   color: #700b0b;
   text-decoration: none;
@@ -165,7 +182,7 @@ a:hover {
 
 h1 {
   text-align: center;
-  margin: auto;
+  white-space: nowrap;
 }
 
 h2 {
@@ -173,9 +190,11 @@ h2 {
   margin-bottom: 1em;
   text-decoration: underline;
 }
+
 h3 {
   margin-top: 15px;
 }
+
 h4 {
   font-family: monospace;
   font-size: 15px;
@@ -198,18 +217,21 @@ body {
   margin-right: 10px;
 }
 
-form > div {
+form>div {
   margin-right: 0px;
   margin-top: 6px;
   margin-bottom: 6px;
 }
-div > input {
+
+div>input {
   width: 220px;
 }
+
 form label {
   display: inline-block;
   width: 60px;
 }
+
 button {
   height: 30px;
   width: 120px;
@@ -220,16 +242,20 @@ button {
   margin: auto;
   border: solid #dddddd 4px;
 }
+
 .invert-background-color {
   backdrop-filter: invert(0);
 }
+
 .invert-color {
   filter: invert(1);
 }
+
 .transition-hover:hover {
   transition: 0.8s;
   transition-timing-function: ease-in-out;
 }
+
 .important {
   color: #ff5500;
   font-size: 20px;
@@ -254,6 +280,8 @@ button {
   background-color: #dddddd;
   border: solid;
   display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
 .design-line-left {
@@ -277,11 +305,13 @@ button {
   padding: 2px;
   white-space: nowrap;
 }
+
 .design-textarea {
   width: 220px;
   height: 3em;
   resize: none;
 }
+
 .vertical-line {
   position: fixed;
   top: 0;
@@ -292,19 +322,27 @@ button {
   border-right: 10px double black;
   z-index: -2;
 }
+
 .display-flex {
   display: flex;
 }
+
 .align-items-center {
   align-items: center;
 }
+
 .design-dark-mode-switch {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
   margin-right: 10px;
 }
+
 .big-checkbox {
   transform: scale(1.5);
   margin: 8px;
+}
+
+.width-125px {
+  width: 125px;
 }
