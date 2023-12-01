@@ -8,14 +8,25 @@
       name="description"
       content="Feladat gyakorlás a Frontend developer képzésre."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link id="theme" rel="stylesheet" href="dark-style.css" />
     <title>A tej csodái!</title>
   </head>
 
   <body>
+    <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
-    <header>
-      <h1 class="design-main-title">A TEJ</h1>
+    <header class="design-main-title">
+      <h1>A TEJ</h1>
+      <span class="design-dark-mode-switch">
+        <label for="themeSwitch">Dark Mode on</label>
+        <input
+          type="checkbox"
+          id="themeSwitch"
+          class="big-checkbox"
+          onchange="toggleTheme()"
+          checked
+        />
+      </span>
     </header>
 
     <div class="design-menu no-margin-right invert-background-color">
@@ -40,6 +51,9 @@
           </li>
           <li>
             <a href="#oldal-alja">Oldal alja</a>
+          </li>
+          <li>
+            <a href="trash.html">Szemétbe dobás</a>
           </li>
         </ul>
       </nav>
@@ -266,7 +280,6 @@
               rows="10"
             ></textarea>
           </div>
-
           <div>
             <button type="submit">Elküld</button>
           </div>
@@ -278,5 +291,17 @@
       <div class="sign invert-color">Készítette: Kupás Norbert</div>
     </footer>
     <a id="oldal-alja"></a>
+    <script>
+      function toggleTheme() {
+        var themeSwitch = document.getElementById("themeSwitch");
+        var themeLink = document.getElementById("theme");
+
+        if (themeSwitch.checked) {
+          themeLink.href = "dark-style.css";
+        } else {
+          themeLink.href = "style.css";
+        }
+      }
+    </script>
   </body>
 </html>

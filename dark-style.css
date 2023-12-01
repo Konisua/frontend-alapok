@@ -48,7 +48,6 @@
   }
   .margin-pullback {
     margin-top: -205px;
-    visibility: hidden;
   }
   nav {
     text-align: left;
@@ -79,7 +78,7 @@
     margin-top: 2px;
     border-style: solid;
     position: sticky;
-    background-color: #dddddd;
+    background-color: black;
     top: 0px;
     padding: 2px;
   }
@@ -100,7 +99,6 @@
   }
   .margin-pullback {
     margin-top: -20px;
-    visibility: hidden;
   }
   nav {
     text-align: left;
@@ -118,6 +116,7 @@
   }
 }
 @media screen and (max-width: 680px) {
+  
   ul {
     max-height: none;
     flex-direction: column;
@@ -130,12 +129,13 @@
   }
 }
 @media screen and (max-width: 359px) {
-  * {
-    visibility: hidden;
-  }
-  .not-compatible-size {
-    visibility: visible;
-  }
+* {
+  visibility: hidden;
+}
+.not-compatible-size {
+  visibility: visible;
+}
+
 }
 hr {
   margin-block-start: 10px;
@@ -166,7 +166,7 @@ a:hover {
 h1 {
   text-align: center;
   margin: auto;
-}
+  }
 
 h2 {
   margin-top: 1em;
@@ -187,13 +187,12 @@ h4 {
   font-style: italic;
   font-weight: bold;
   text-align: right;
-  background-color: #222222;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
 body {
-  background-color: #dddddd;
-  color: #222222;
+  background-color: #222222;
+  color: #dddddd;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -221,7 +220,7 @@ button {
   border: solid #dddddd 4px;
 }
 .invert-background-color {
-  backdrop-filter: invert(0);
+  backdrop-filter: invert(1);
 }
 .invert-color {
   filter: invert(1);
@@ -231,7 +230,7 @@ button {
   transition-timing-function: ease-in-out;
 }
 .important {
-  color: #ff5500;
+  color: #c77878;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
@@ -251,7 +250,7 @@ button {
 
 .design-main-title {
   border-radius: 10px;
-  background-color: #dddddd;
+  background-color: black;
   border: solid;
   display: flex;
 }
@@ -273,7 +272,7 @@ button {
   border-radius: 4px;
   width: 300px;
   height: 210px;
-  background-color: inherit;
+  background-color: #222222;
   padding: 2px;
   white-space: nowrap;
 }
