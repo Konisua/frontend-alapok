@@ -52,6 +52,9 @@
     line-height: 16px;
     font-size: 10pt;
   }
+  .li-style-down {
+    list-style-type: disclosure-open;
+  } 
 
   .margin-pullback {
     margin-top: -205px;
@@ -62,7 +65,6 @@
     text-align: left;
     padding: 26px;
   }
-
 }
 
 .image-container {
@@ -129,7 +131,6 @@
     display: flex;
     justify-content: space-evenly;
   }
-
 }
 
 @media screen and (max-width: 680px) {
@@ -218,13 +219,13 @@ body {
   margin-right: 10px;
 }
 
-form>div {
+form > div {
   margin-right: 0px;
   margin-top: 6px;
   margin-bottom: 6px;
 }
 
-div>input {
+div > input {
   width: 220px;
 }
 
