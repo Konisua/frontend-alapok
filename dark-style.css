@@ -90,6 +90,7 @@
     background-color: black;
     top: 0px;
     padding: 2px;
+    box-shadow: 0 2px 4px 0 rgba(182, 182, 182, 0.5);
   }
 
   ul {

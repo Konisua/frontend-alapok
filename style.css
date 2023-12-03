@@ -87,6 +87,7 @@
   .design-menu {
     margin-top: 2px;
     border-style: solid;
+    box-shadow: 0 4px 4px 0 rgba(182, 182, 182, 0.8);
     position: sticky;
     background-color: #dddddd;
     top: 0px;
