@@ -1,271 +1,254 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Kupás Norbert" />
-    <meta
-      name="description"
-      content="Feladat gyakorlás a Frontend developer képzésre."
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>A tej csodái!</title>
-  </head>
 
-  <body>
-    <a id="oldal-teteje"></a>
-    <header>
-      <h1 class="design-main-title">A TEJ</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kupás Norbert" />
+  <meta name="description" content="Feladat gyakorlás a Frontend developer képzésre." />
+  <link id="theme" rel="stylesheet" href="dark-style.css" />
+  <title>A tej csodái!</title>
+</head>
 
-    <div class="design-menu no-margin-right invert-background-color">
-      <nav>
-        <ul>
-          <li>
-            <a href="#oldal-teteje">Oldal teteje</a>
-          </li>
-          <li>
-            <a href="#oldal-navigacio-tartosito"
-              >Tartósító <br />
-              eljárások</a
-            >
-          </li>
-          <li>
-            <a href="#oldal-navigacio-homogenizalas">Homogenizálás</a>
-          </li>
-          <li>
-            <a href="#oldal-navigacio-miertnem"
-              >Miért nem alszik meg a bolti tej?</a
-            >
-          </li>
-          <li>
-            <a href="#oldal-alja">Oldal alja</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+<body>
+  <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
+  <a id="oldal-teteje"></a>
+  <header class="design-main-title">
+    <div class="width-125px"></div>
+    <h1>A TEJ</h1>
+    <span class="design-dark-mode-switch width-125px">
+      <label for="themeSwitch">Dark Mode</label>
+      <input type="checkbox" id="themeSwitch" class="big-checkbox" onchange="toggleTheme()" checked />
+    </span>
+  </header>
 
-    <hr class="margin-pullback no-margin-right" />
-    <p class="important margin-right">
+  <div class="design-menu no-margin-right invert-background-color">
+    <nav>
+      <ul>
+        <li>
+          <a href="#oldal-teteje">Oldal teteje</a>
+        </li>
+        <li>
+          <a href="#oldal-navigacio-tartosito">Tartósító <br />
+            eljárások</a>
+        </li>
+        <li>
+          <a href="#oldal-navigacio-homogenizalas">Homogenizálás</a>
+        </li>
+        <li>
+          <a href="#oldal-navigacio-miertnem">Miért nem alszik meg a bolti tej?</a>
+        </li>
+        <li class="li-style-down">
+          <a href="trash.html">Szemétbe dobás</a>
+        </li>
+        <li>
+          <a href="#oldal-alja">Oldal alja</a>
+
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <hr class="margin-pullback no-margin-right" />
+  <section title="Bevezetés" class="margin-right-media-changed">
+    <p class="important">
       A legújabb magyar táplálkozási ajánlás szerint naponta fél liter tejet
       vagy ennek megfelelő tejterméket javasolt fogyasztani. <br />
       De melyik tejet igyuk, és mit jelentenek a különböző jelzések a
       tejesdobozokon? Ebben segítünk!
     </p>
-    <div>
+    <p>
       A tejben és tejtermékekben számos értékes tápanyag – fehérjék, zsírok,
       szénhidrátok, vitaminok és ásványi anyagok – található, melyekre a
       szervezetnek szüksége van, bizonyos összetevői (kalcium) pedig ebből az
-      élelmiszercsoportból hasznosulnak a legjobban. A tej és tejtermékek minden
-      korcsoport számára ajánlottak, különösen a növekedésben lévő gyerekeknek
-      az erős, egészséges fogak és a megfelelő csonttömeg kialakulása érdekében.
-    </div>
-    <div>
+      élelmiszercsoportból hasznosulnak a legjobban. A tej és tejtermékek
+      minden korcsoport számára ajánlottak, különösen a növekedésben lévő
+      gyerekeknek az erős, egészséges fogak és a megfelelő csonttömeg
+      kialakulása érdekében.
+    </p>
+    <p>
       Fejés után a tejet azonnal lehűtik, hogy meggátolják a baktériumok
       szaporodását, majd a feldolgozás első lépéseként szűréssel vagy
       centrifugálással tisztítják. Ezután következik az előírt zsírtartalom
-      beállítása az alábbiak szerint: a zsírtartalom csökkentése fölözéssel vagy
-      sovány tej hozzáadásával, a zsírtartalom növelése pedig tejszín
+      beállítása az alábbiak szerint: a zsírtartalom csökkentése fölözéssel
+      vagy sovány tej hozzáadásával, a zsírtartalom növelése pedig tejszín
       hozzáadásával történhet. Következő lépés a pasztőrözés, melynek célja a
-      patogén baktériumok teljes, a többi mikroorganizmus minél nagyobb mértékű
-      elpusztítása, úgy hogy a tej eredeti tulajdonságait minél jobban
-      megtartsa. A pasztőrözés után a tejet hűtik és homogénezik. A homogénezés
-      egy olyan fizikai eljárás, amely során a tejet nagy nyomással átpréselik
-      egy kis résen, így a tejzsír feldarabolódik, és megakadályozza a későbbi
-      esetleges összetapadásukat (fölöződés). Homogenizálás következtében a
-      termék könnyebben emészthetővé is válik.
-    </div>
-    <div>
-      <a id="oldal-navigacio-tartosito"></a>
-      <h2>Tartósító eljárások</h2>
-      <h3>Nyers tej</h3>
-      <p>
-        A termelői nyers tehéntej közvetlen fogyasztásra szánt, teljes
-        kifejéssel nyert, legfeljebb 40 °C hőmérsékletre melegített termék,
-        amelyből semmit nem vontak el és nem adtak hozzá. A termelői nyers
-        tehéntej közvetlen fogyasztásra hűtés nélkül a fejés kezdetétől
-        számított 2 órán belül értékesíthető; vagy a fejés után 2 órán belül
-        legalább a tárolási hőmérsékletre, azaz 4-8 °C-ra kell hűteni.
-        Fogyasztása előtt javasolt felforralni.
-      </p>
-      <h3>Pasztőrözött tej</h3>
-      <p>
-        A pasztőrözés 100 °C alatti hőkezelést jelent, amely során a tejben a
-        mikroorganizmusok számát olyan szintre csökkentik, hogy az már nem
-        jelent egészségügyi kockázatot, és egyúttal a termék eltarthatóságát is
-        meghosszabbítja. Tehéntej esetén ez általában 72-76 °C hőmérsékleten
-        15-40 másodpercig vagy ezzel egyenértékű más hőmérséklet-idő kombináció
-        szerinti hőkezelés, majd a legrövidebb időn belül legalább 6 oC-ra
-        történő hűtést jelent. (Minél nagyobb a hőmérséklet, annál rövidebb idő
-        kell a csíraölő hatás eléréséhez.)
-      </p>
-      <h3>ESL tej</h3>
-      <p>
-        Az ESL (Extend Shelf Life) technológia gyakorlatilag a pasztőrözés és az
-        ultrapasztőrözés között van. Olyan hőkezelés, amelynek során a tejet
-        néhány pillanatig 100-135 °C közötti hőmérsékletre melegítik, majd
-        gyorsan lehűtik. Ennek következtében a tej élvezeti értéke nem csökken,
-        azonban az eltarthatósága 21-28 napra nő. Az ESL tejek hűtést
-        igényelnek.
-      </p>
-      <h3>UHT tej</h3>
-      <p>
-        Az UHT (Ultra Hight Temperature Treated Technology) kifejezés ultramagas
-        hőmérsékleten történő hőkezelést jelent, melynek során a tejet 136-142
-        °C hőmérsékleten 2-6 másodpercig hőkezelik, majd szobahőmérsékletre
-        hűtve aszeptikusan (csíramentesen) csomagolják. Az UHT tejek nem
-        igénylenek hűtést, szobahőmérsékleten több hónapon át tárolhatóak. A
-        közhiedelemmel ellentétben nem tartalmaznak tartósítószert, pusztán a
-        speciális hőkezelésnek és csomagolásnak köszönhetően tarthatók el
-        sokáig.
-      </p>
-    </div>
-    <section class="margin-right">
-      <a id="oldal-navigacio-homogenizalas"></a>
-      <h2>Homogenizálás</h2>
-      <p>
-        A homogenizálás folyamata során a tejet nagy nyomással átpréselik egy
-        kis résen. Így a tejzsír kis elemekre törik össze, emulgált állapotban
-        marad meg a tejben és nem jön fel a felszínre. A tej homogenizálásának
-        célja, hogy azt azok is könnyebben megemészthessék, akik bél- és
-        emésztőrendszeri problémákkal küzdenek.
-      </p>
-      <h2>Mi az aszeptikus technológia?</h2>
-      <p>
-        Az aszeptikus technológia a 20. század forradalmi találmánya. Ezért a
-        találmányért kapta meg a Tetra Pak 1989-ben, az élelmiszeripari
-        technológia területén az utóbbi ötven év legjelentősebb tudományos
-        felfedezésének járó díjat. 1996-ban az amerikai elnökhelyettes, Al Gore
-        a Tetra Brik Aseptic csomagolásnak - amely a világ legelterjedtebb
-        kartoncsomagolása - az Aszeptikus Csomagolás Folyamatos Fejlődéséért
-        díjat adományozta. Az aszeptikus csomagolásba töltött élelmiszereket
-        szobahőmérsékleten lehet tárolni (feleslegessé válik a költséges hűtés a
-        szállítás, a rakodás és a raktározás során egyaránt), ráadásul sokkal
-        tovább eltarthatók, mint a pasztőrözött termékek. Az élelmiszereket – az
-        UHT kezelést követően - légmentesen zárt, aszeptikus gyártósorokon
-        töltik a steril dobozokba! Ez az eljárás megbízhatóan elpusztítja a
-        kórokozó baktériumokat és azok csíráit, de az élelmiszer tápértéke,
-        minősége és íze megmarad.
-      </p>
-    </section>
-    <div>
-      <a id="oldal-navigacio-miertnem"></a>
-      <h2>Miért nem alszik meg a bolti tej?</h2>
-      <p>
-        Először is tisztázzuk mi is az az aludttej. A tej a tejben természetesen
-        előforduló laktóbacilus törzsek áldásos tevékenységének hatására alszik
-        meg. Vagyis a laktóbacilusok addig eszik a tejben lévő laktózt - vagyis
-        tejcukrot -, amíg a tej savanyú lesz*, és megalszik. Ez szoba
-        hőmérsékleten általában 1,5 - 2 nap alatt bekövetkezik. A végeredmény
-        pedig egy egészséges laktóbacilusokban gazdag, tejcukorban szegény és
-        így könnyen emészthető tejtermék. Nem érhető el leírás a fényképhez. És
-        hogy visszatérjünk az eredeti kérdésre miért nem alszik meg a bolti tej?
-        Mert a különböző tartósítási eljárások, pl az UHT vagy ESL elpusztítják
-        a tejben található természetes baktérium törzseket, így nincs amitől a
-        tej megaludjon. Ezért az UHT és ESL technológiával tartósított bolti
-        tej, ha meg is alszik nem a természetesen benne lévő laktóbacilusok
-        szaporodásának, hanem a levegőből, egyéb környezeti szennyezésből
-        belekerült baktérium törzsek szaporodásának köszönhető, ami általában
-        keserű ízt, rossz illatot, és fogyasztásra alkalmatlan - egészségtelen
-        végeredményt ad. A pasztőrözött tej egyébként általában tartalmaz kellő
-        számú laktóbacilust ahhoz, hogy abból aludttej készülhessen belőle. Ha a
-        tejben antibiotikum-maradványok vannak, az alvadás akkor sem jön létre,
-        hiszen ezek is a laktóbacilusok szaporodását gátolják, így tehát ez is
-        akadálya lehet annak, hogy aludttejet készítsünk. Ha mégis bolti tejből
-        szeretnénk aludttejet készíteni, az egyetlen biztos módja, hogy a tejhez
-        laktóbacilus kultúrákat adunk (sajtkészítési kellékeket árusító
-        boltokban, webáruházakban fagyasztva szárított formában kaphatóak), az
-        így "kultúrázott" tej 1 - 2 napon belül biztosan megalszik. De lehet
-        egyszerűbb felkeresni egy közeli piacot vagy farmot és ott beszerezni a
-        lehető legfrissebb nyers tejet, amihez már csak egy tiszta edényre,
-        szobahőmérsékletre és 1-2 nap türelemre lesz szükségünk, hogy
-        nagyanyáink egyik kedvencét az aludttejet fogyaszthassuk. Akinek pedig
-        nem jön be az aludttej savanykás íze, jellegzetes illata, annak
-        javaslom, hogy a tejföl (az aludttej tetején képződő zsíros réteg, ez az
-        igazi tejföl!!! ) eltávolítása után melegítse fel a maradék aludttejet,
-        míg azt látja, hogy pelyhekben kicsapódik belőle a fehérje (ez kb 80 -
-        85 fok, nem kell megvárni míg forr, mert akkor kifut) majd hagyjuk
-        nyugodtan lehűlni, utána egy apróbb lyukú szűrűn szűrjük le, és már
-        lehet is enni az igazi házi túrót!
-      </p>
-    </div>
+      patogén baktériumok teljes, a többi mikroorganizmus minél nagyobb
+      mértékű elpusztítása, úgy hogy a tej eredeti tulajdonságait minél jobban
+      megtartsa. A pasztőrözés után a tejet hűtik és homogénezik. A
+      homogénezés egy olyan fizikai eljárás, amely során a tejet nagy
+      nyomással átpréselik egy kis résen, így a tejzsír feldarabolódik, és
+      megakadályozza a későbbi esetleges összetapadásukat (fölöződés).
+      Homogenizálás következtében a termék könnyebben emészthetővé is válik.
+    </p>
+  </section>
 
-    <div class="vertical-line no-margin-right"></div>
-    <div class="wrapper-image-form">
-      <img src="tej01.jpg" alt="Tejek képe 1" />
-      <img
-        src="tej02.jpg"
-        alt="17 db különféle dobozos és üveges tej lefektetve egy asztalra egymás mellé, két sorban."
-      />
-      <div class="design-form">
-        <form
-          action=""
-          name="cikk-kuldese-ismerosnek"
-          onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')"
-        >
-          <h4>Cikk küldése ismerősnek!</h4>
-          <div>
-            <label for="name-input">Név:</label>
-            <input
-              type="text"
-              name="name"
-              id="name-input"
-              placeholder="pl: Jakab pista"
-              required
-              minlength="4"
-            />
-          </div>
-          <div>
-            <label for="phonenumber-input">Telszám:</label>
-            <input
-              type="tel"
-              name="phonenumber"
-              id="phonenumber-input"
-              placeholder="+36102345678"
-            />
-          </div>
-          <div>
-            <label for="email-input">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="email-input"
-              placeholder="valaki@valami.hu"
-              required
-            />
-          </div>
-          <div>
-            <label for="age-input">Kora:</label>
-            <input
-              type="number"
-              name="age"
-              id="age-input"
-              min="0"
-              max="120"
-              placeholder="min:0 - max:120"
-            />
-          </div>
-          <div>
-            <label for="message-input">Üzenet:</label>
-            <textarea
-              class="design-textarea"
-              name="message"
-              id="message-input"
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-
-          <div>
-            <button type="submit">Elküld</button>
-          </div>
-        </form>
-      </div>
+  <section title="Tartósító eljárások" class="margin-right-media-changed">
+    <a id="oldal-navigacio-tartosito"></a>
+    <h2>Tartósító eljárások</h2>
+    <h3>Nyers tej</h3>
+    <p>
+      A termelői nyers tehéntej közvetlen fogyasztásra szánt, teljes
+      kifejéssel nyert, legfeljebb 40 °C hőmérsékletre melegített termék,
+      amelyből semmit nem vontak el és nem adtak hozzá. A termelői nyers
+      tehéntej közvetlen fogyasztásra hűtés nélkül a fejés kezdetétől
+      számított 2 órán belül értékesíthető; vagy a fejés után 2 órán belül
+      legalább a tárolási hőmérsékletre, azaz 4-8 °C-ra kell hűteni.
+      Fogyasztása előtt javasolt felforralni.
+    </p>
+    <h3>Pasztőrözött tej</h3>
+    <p>
+      A pasztőrözés 100 °C alatti hőkezelést jelent, amely során a tejben a
+      mikroorganizmusok számát olyan szintre csökkentik, hogy az már nem
+      jelent egészségügyi kockázatot, és egyúttal a termék eltarthatóságát is
+      meghosszabbítja. Tehéntej esetén ez általában 72-76 °C hőmérsékleten
+      15-40 másodpercig vagy ezzel egyenértékű más hőmérséklet-idő kombináció
+      szerinti hőkezelés, majd a legrövidebb időn belül legalább 6 oC-ra
+      történő hűtést jelent. (Minél nagyobb a hőmérséklet, annál rövidebb idő
+      kell a csíraölő hatás eléréséhez.)
+    </p>
+    <h3>ESL tej</h3>
+    <p>
+      Az ESL (Extend Shelf Life) technológia gyakorlatilag a pasztőrözés és az
+      ultrapasztőrözés között van. Olyan hőkezelés, amelynek során a tejet
+      néhány pillanatig 100-135 °C közötti hőmérsékletre melegítik, majd
+      gyorsan lehűtik. Ennek következtében a tej élvezeti értéke nem csökken,
+      azonban az eltarthatósága 21-28 napra nő. Az ESL tejek hűtést
+      igényelnek.
+    </p>
+    <h3>UHT tej</h3>
+    <p>
+      Az UHT (Ultra Hight Temperature Treated Technology) kifejezés ultramagas
+      hőmérsékleten történő hőkezelést jelent, melynek során a tejet 136-142
+      °C hőmérsékleten 2-6 másodpercig hőkezelik, majd szobahőmérsékletre
+      hűtve aszeptikusan (csíramentesen) csomagolják. Az UHT tejek nem
+      igénylenek hűtést, szobahőmérsékleten több hónapon át tárolhatóak. A
+      közhiedelemmel ellentétben nem tartalmaznak tartósítószert, pusztán a
+      speciális hőkezelésnek és csomagolásnak köszönhetően tarthatók el
+      sokáig.
+    </p>
+    <h2>Mi az aszeptikus technológia?</h2>
+    <p>
+      Az aszeptikus technológia a 20. század forradalmi találmánya. Ezért a
+      találmányért kapta meg a Tetra Pak 1989-ben, az élelmiszeripari
+      technológia területén az utóbbi ötven év legjelentősebb tudományos
+      felfedezésének járó díjat. 1996-ban az amerikai elnökhelyettes, Al Gore
+      a Tetra Brik Aseptic csomagolásnak - amely a világ legelterjedtebb
+      kartoncsomagolása - az Aszeptikus Csomagolás Folyamatos Fejlődéséért
+      díjat adományozta. Az aszeptikus csomagolásba töltött élelmiszereket
+      szobahőmérsékleten lehet tárolni (feleslegessé válik a költséges hűtés a
+      szállítás, a rakodás és a raktározás során egyaránt), ráadásul sokkal
+      tovább eltarthatók, mint a pasztőrözött termékek. Az élelmiszereket – az
+      UHT kezelést követően - légmentesen zárt, aszeptikus gyártósorokon
+      töltik a steril dobozokba! Ez az eljárás megbízhatóan elpusztítja a
+      kórokozó baktériumokat és azok csíráit, de az élelmiszer tápértéke,
+      minősége és íze megmarad.
+    </p>
+  </section>
+  <section title="Homogenizálás" class="margin-right-media-changed">
+    <a id="oldal-navigacio-homogenizalas"></a>
+    <h2>Homogenizálás</h2>
+    <p>
+      A homogenizálás folyamata során a tejet nagy nyomással átpréselik egy
+      kis résen. Így a tejzsír kis elemekre törik össze, emulgált állapotban
+      marad meg a tejben és nem jön fel a felszínre. A tej homogenizálásának
+      célja, hogy azt azok is könnyebben megemészthessék, akik bél- és
+      emésztőrendszeri problémákkal küzdenek.
+    </p>
+  </section>
+  <article title="Miért nem alszik meg a tej" class="margin-right-media-changed">
+    <a id="oldal-navigacio-miertnem"></a>
+    <h2>Miért nem alszik meg a bolti tej?</h2>
+    <p>
+      Először is tisztázzuk mi is az az aludttej. A tej a tejben természetesen
+      előforduló laktóbacilus törzsek áldásos tevékenységének hatására alszik
+      meg. Vagyis a laktóbacilusok addig eszik a tejben lévő laktózt - vagyis
+      tejcukrot -, amíg a tej savanyú lesz*, és megalszik. Ez szoba
+      hőmérsékleten általában 1,5 - 2 nap alatt bekövetkezik. A végeredmény
+      pedig egy egészséges laktóbacilusokban gazdag, tejcukorban szegény és
+      így könnyen emészthető tejtermék. Nem érhető el leírás a fényképhez. És
+      hogy visszatérjünk az eredeti kérdésre miért nem alszik meg a bolti tej?
+      Mert a különböző tartósítási eljárások, pl az UHT vagy ESL elpusztítják
+      a tejben található természetes baktérium törzseket, így nincs amitől a
+      tej megaludjon. Ezért az UHT és ESL technológiával tartósított bolti
+      tej, ha meg is alszik nem a természetesen benne lévő laktóbacilusok
+      szaporodásának, hanem a levegőből, egyéb környezeti szennyezésből
+      belekerült baktérium törzsek szaporodásának köszönhető, ami általában
+      keserű ízt, rossz illatot, és fogyasztásra alkalmatlan - egészségtelen
+      végeredményt ad. A pasztőrözött tej egyébként általában tartalmaz kellő
+      számú laktóbacilust ahhoz, hogy abból aludttej készülhessen belőle. Ha a
+      tejben antibiotikum-maradványok vannak, az alvadás akkor sem jön létre,
+      hiszen ezek is a laktóbacilusok szaporodását gátolják, így tehát ez is
+      akadálya lehet annak, hogy aludttejet készítsünk. Ha mégis bolti tejből
+      szeretnénk aludttejet készíteni, az egyetlen biztos módja, hogy a tejhez
+      laktóbacilus kultúrákat adunk (sajtkészítési kellékeket árusító
+      boltokban, webáruházakban fagyasztva szárított formában kaphatóak), az
+      így "kultúrázott" tej 1 - 2 napon belül biztosan megalszik. De lehet
+      egyszerűbb felkeresni egy közeli piacot vagy farmot és ott beszerezni a
+      lehető legfrissebb nyers tejet, amihez már csak egy tiszta edényre,
+      szobahőmérsékletre és 1-2 nap türelemre lesz szükségünk, hogy
+      nagyanyáink egyik kedvencét az aludttejet fogyaszthassuk. Akinek pedig
+      nem jön be az aludttej savanykás íze, jellegzetes illata, annak
+      javaslom, hogy a tejföl (az aludttej tetején képződő zsíros réteg, ez az
+      igazi tejföl!!! ) eltávolítása után melegítse fel a maradék aludttejet,
+      míg azt látja, hogy pelyhekben kicsapódik belőle a fehérje (ez kb 80 -
+      85 fok, nem kell megvárni míg forr, mert akkor kifut) majd hagyjuk
+      nyugodtan lehűlni, utána egy apróbb lyukú szűrűn szűrjük le, és már
+      lehet is enni az igazi házi túrót!
+    </p>
+  </article>
+  <div class="vertical-line no-margin-right"></div>
+  <div class="wrapper-image-form margin-right-media-changed">
+    <img class="design-form-images" src="tej02.jpg"
+      alt="17 db különféle dobozos és üveges tej lefektetve egy asztalra egymás mellé, két sorban." />
+    <img class="design-form-images" src="tej01.jpg" alt="Egy pohár tej, 5 doboz tejjel a háttérben." />
+    <div class="design-form">
+      <form action="" name="cikk-kuldese-ismerosnek"
+        onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')">
+        <h4>Cikk küldése ismerősnek!</h4>
+        <div>
+          <label for="name-input">Név:</label>
+          <input type="text" name="name" id="name-input" placeholder="pl: Jakab pista" required minlength="4" />
+        </div>
+        <div>
+          <label for="phonenumber-input">Telszám:</label>
+          <input type="tel" name="phonenumber" id="phonenumber-input" placeholder="+36102345678" />
+        </div>
+        <div>
+          <label for="email-input">E-mail:</label>
+          <input type="email" name="email" id="email-input" placeholder="valaki@valami.hu" required />
+        </div>
+        <div>
+          <label for="age-input">Kora:</label>
+          <input type="number" name="age" id="age-input" min="0" max="120" placeholder="min:0 - max:120" />
+        </div>
+        <div>
+          <label for="message-input">Üzenet:</label>
+          <textarea class="design-textarea" name="message" id="message-input" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <button type="submit">Elküld</button>
+        </div>
+      </form>
     </div>
-    <footer class="no-margin-right invert-background-color">
-      <hr class="no-margin-right" />
-      <div class="sign invert-color">Készítette: Kupás Norbert</div>
-    </footer>
-    <a id="oldal-alja"></a>
-  </body>
+  </div>
+  <footer class="no-margin-right invert-background-color">
+    <hr class="no-margin-right" />
+    <div class="sign invert-color">Készítette: Kupás Norbert</div>
+  </footer>
+  <a id="oldal-alja"></a>
+  <script>
+    function toggleTheme() {
+      var themeSwitch = document.getElementById("themeSwitch");
+      var themeLink = document.getElementById("theme");
+
+      if (themeSwitch.checked) {
+        themeLink.href = "dark-style.css";
+      } else {
+        themeLink.href = "style.css";
+      }
+    }
+  </script>
+</body>
+
 </html>
