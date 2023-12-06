@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Kupás Norbert" />
   <meta name="description" content="Feladat gyakorlás a Frontend developer képzésre." />
-  <link id="theme" rel="stylesheet" href="dark-style.css" />
+  <link rel="stylesheet" href="style.css" />
   <title>A tej csodái!</title>
 </head>
 
@@ -18,7 +18,7 @@
     <h1>A TEJ</h1>
     <span class="design-dark-mode-switch width-125px">
       <label for="themeSwitch">Dark Mode</label>
-      <input type="checkbox" id="themeSwitch" class="big-checkbox" onchange="toggleTheme()" checked />
+      <input type="checkbox" id="themeSwitch" class="big-checkbox" checked />
     </span>
   </header>
 
@@ -237,18 +237,7 @@
     <div class="sign invert-color">Készítette: Kupás Norbert</div>
   </footer>
   <a id="oldal-alja"></a>
-  <script>
-    function toggleTheme() {
-      var themeSwitch = document.getElementById("themeSwitch");
-      var themeLink = document.getElementById("theme");
-
-      if (themeSwitch.checked) {
-        themeLink.href = "dark-style.css";
-      } else {
-        themeLink.href = "style.css";
-      }
-    }
-  </script>
+  
 </body>
 
 </html>
