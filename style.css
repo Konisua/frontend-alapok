@@ -4,17 +4,46 @@
 }
 
 :root {
-  --theme-menu-icon-color: black;
-  --theme-menu-bg-color: black;
-  --theme-main-title-bg-color: black;
+  --theme-menu-icon-color: white;
+  --theme-menu-bg-color: white;
+  --theme-main-title-bg-color: white;
   --theme-hr-color: black;
   --theme-a-visited-color: #005090;
   --theme-a-hover-color: #700b0b;
-  --theme-color: #dddddd;
-  --theme-bg-color: #222222;
+  --theme-color: #222222;
+  --theme-bg-color: #dddddd;
   --theme-important-color: #c77878;
   --theme-lines-color: black;
+
+  --theme-dark-menu-icon-color: black;
+  --theme-dark-menu-bg-color: black;
+  --theme-dark-main-title-bg-color: black;
+  --theme-dark-hr-color: black;
+  --theme-dark-a-visited-color: #005090;
+  --theme-dark-a-hover-color: #700b0b;
+  --theme-dark-color: #dddddd;
+  --theme-dark-bg-color: #222222;
+  --theme-dark-important-color: #c77878;
+  --theme-dark-lines-color: black;
 }
+/* Light - dark mode switch section start */
+
+header:has(span > #themeSwitch:checked) ~ div {
+  background-color: var(--theme-dark-bg-color);
+  color: var(--theme-dark-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ section {
+  background-color: var(--theme-dark-bg-color);
+  color: var(--theme-dark-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ article {
+  background-color: var(--theme-dark-bg-color);
+  color: var(--theme-dark-color);
+}
+
+/* Light - dark mode switch section end */
 
 .not-compatible-size {
   visibility: hidden;
