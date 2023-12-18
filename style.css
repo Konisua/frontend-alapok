@@ -65,6 +65,9 @@ header:has(span > #themeSwitch:checked) ~ .wrapper-image-form > img {
 /* nagy méret 1080px felett */
 
 @media screen and (min-width: 1080px) {
+  p {
+    margin-right: 4px;
+  }
   header:has(span > #themeSwitch:checked) ~ .design-menu {
     background-color: var(--theme-dark-bg-color);
   }
@@ -92,6 +95,7 @@ header:has(span > #themeSwitch:checked) ~ .wrapper-image-form > img {
     left: 100%;
     background: var(--theme-menu-bg-color) url(box01.svg) no-repeat;
     background-size: cover;
+    border-radius: 5px;
   }
   footer {
     background-color: var(--theme-footer-bg-color);
