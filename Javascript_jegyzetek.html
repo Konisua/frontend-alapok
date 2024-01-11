@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript jegyzetek</title>
+
+    <style>
+        header {
+            background-color: bisque;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 2em;
+        }
+
+        .tableBorder {
+            border: 2px solid black;
+            border-radius: 2px;
+            text-align: center;
+            width: 35em
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <header>JavaScript</header>
+    <h1>JavaScript aritmetikai operátorok</h1>
+    <div>
+        <table class="tableBorder">
+            <thead>
+                <tr>
+                    <th><strong>Operátor</strong></th>
+                    <th><strong>Példa</strong></th>
+                    <th><strong>Eredmény</strong></th>
+                    <th><strong>Leírás</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>+</td>
+                    <td>5+2</td>
+                    <td>7</td>
+                    <td>összeadás</td>
+                </tr>
+                <tr>
+                    <td>–</td>
+                    <td>5-2</td>
+                    <td>3</td>
+                    <td>kivonás</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>5*2</td>
+                    <td>10</td>
+                    <td>szorzás</td>
+                </tr>
+                <tr>
+                    <td>**</td>
+                    <td>5**2</td>
+                    <td>25</td>
+                    <td>hatványozás</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>5/2</td>
+                    <td>2,5</td>
+                    <td>osztás</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>5%2</td>
+                    <td>1</td>
+                    <td>a maradékot adja vissza</td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td>5++</td>
+                    <td>6</td>
+                    <td>eggyel növeli az értékét</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>5–</td>
+                    <td>4</td>
+                    <td>eggyel csökkenti az értékét</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>JavaScript értékadó operátorok</h1>
+        <table class="tableBorder">
+            <thead>
+                <tr>
+                    <th><strong>Operátor</strong></th>
+                    <th><strong>Példa</strong></th>
+                    <th><strong>Így is írhatnánk</strong></th>
+                    <th><strong>Leírás</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>=</td>
+                    <td>x = 5</td>
+                    <td>x = 5</td>
+                    <td>értékadás</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>x += 5</td>
+                    <td>x = x + 5</td>
+                    <td>az alapértéket növeli</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>x -= 5</td>
+                    <td>x = x – 5</td>
+                    <td>az alapértéket csökkenti</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>x *= 5</td>
+                    <td>x = x * 5</td>
+                    <td>az alapértéket szorozza</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>x /= 5</td>
+                    <td>x = x / 5</td>
+                    <td>az alapértéket osztja</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>x %= 5</td>
+                    <td>x = x % 5</td>
+                    <td>a maradékkal lesz egyenlő az x</td>
+                </tr>
+                <tr>
+                    <td>**=</td>
+                    <td>x **= 5</td>
+                    <td>x = x ** 5</td>
+                    <td>x egyenlő lesz a hatványraemeléssel</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>JavaScript összehasonlító operátorok</h1>
+        <table class="tableBorder">
+            <thead>
+                <tr>
+                    <th><strong>Operátor</strong></th>
+                    <th><strong>Példa</strong></th>
+                    <th><strong>Eredmény</strong></th>
+                    <th><strong>Leírás</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>==</td>
+                    <td>„5” == 5</td>
+                    <td>igaz</td>
+                    <td>egyenlő-e a két érték</td>
+                </tr>
+                <tr>
+                    <td>===</td>
+                    <td>„5” === 5</td>
+                    <td>hamis</td>
+                    <td>a két érték és a típusúk egyenlő-e</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>„5” != 5</td>
+                    <td>hamis</td>
+                    <td>nem egyenlő</td>
+                </tr>
+                <tr>
+                    <td>!==</td>
+                    <td>„5” !== 5</td>
+                    <td>igaz</td>
+                    <td>értékük vagy típusuk nem egyenlő</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>5 &gt; 2</td>
+                    <td>igaz</td>
+                    <td>nagyobb-e</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>5 &lt; 2</td>
+                    <td>hamis</td>
+                    <td>kisebb-e</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>5 &gt;= 2</td>
+                    <td>igaz</td>
+                    <td>nagyobb vagy egyenlő</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>5 &lt;= 2</td>
+                    <td>hamis</td>
+                    <td>kisebb vagy egyenlő</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>(5 &lt; 2 ) ? igaz : hamis;</td>
+                    <td>hamis</td>
+                    <td>hármas operátor (a ? elé megy a feltétel, a :
+                        elé az igaz ág, a : mögé a hamis ág)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>JavaScript logikai operátorok</h1>
+        <table class="tableBorder">
+            <thead>
+                <tr>
+                    <th><strong>Operátor</strong></th>
+                    <th><strong>Leírás</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&amp;&amp;</td>
+                    <td>LOGIKAI ÉS (mindegyik feltétel igaz)</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>LOGIKAI VAGY (legalább az egyik feltétel igaz)
+                    </td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>LOGIKAI NEM (a feltétel nem igaz)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
