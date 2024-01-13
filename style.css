@@ -3,6 +3,59 @@
   padding: 0;
 }
 
+:root {
+  --theme-menu-icon-color: black;
+  --theme-menu-bg-color: white;
+  --theme-footer-bg-color: white;
+  --theme-main-title-bg-color: white;
+  --theme-hr-color: black;
+  --theme-a-visited-color: #005090;
+  --theme-a-hover-color: #700b0b;
+  --theme-color: #222222;
+  --theme-bg-color: #dddddd;
+  --theme-important-color: #c77878;
+  --theme-lines-color: black;
+
+  --theme-dark-menu-icon-color: white;
+  --theme-dark-menu-bg-color: black;
+  --theme-dark-footer-bg-color: black;
+  --theme-dark-main-title-bg-color: black;
+  --theme-dark-color: #dddddd;
+  --theme-dark-bg-color: #222222;
+}
+/* Light - dark mode switch section start */
+
+body:has(header > span > #themeSwitch:checked) {
+  background-color: var(--theme-dark-bg-color);
+  color: var(--theme-dark-color);
+  color-scheme: dark;
+}
+
+header:has(span > #themeSwitch:checked) {
+  background-color: var(--theme-dark-main-title-bg-color);
+  color: var(--theme-dark-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ .design-menu {
+  background-color: var(--theme-dark-menu-bg-color);
+  color: var(--theme-dark-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ .design-menu > nav > ul {
+  color: var(--theme-dark-menu-icon-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ footer {
+  color: var(--theme-dark-color);
+  background-color: var(--theme-dark-footer-bg-color);
+}
+
+header:has(span > #themeSwitch:checked) ~ .wrapper-image-form > img {
+  border-color: var(--theme-dark-color);
+}
+
+/* Light - dark mode switch section end */
+
 .not-compatible-size {
   visibility: hidden;
   position: absolute;
@@ -12,6 +65,12 @@
 /* nagy méret 1080px felett */
 
 @media screen and (min-width: 1080px) {
+  p {
+    margin-right: 4px;
+  }
+  header:has(span > #themeSwitch:checked) ~ .design-menu {
+    background-color: var(--theme-dark-bg-color);
+  }
   .margin-right-media-changed {
     margin-right: 200px;
   }
@@ -34,8 +93,12 @@
     position: sticky;
     top: 55px;
     left: 100%;
-    background: transparent url(box01.svg) no-repeat;
+    background: var(--theme-menu-bg-color) url(box01.svg) no-repeat;
     background-size: cover;
+    border-radius: 5px;
+  }
+  footer {
+    background-color: var(--theme-footer-bg-color);
   }
 
   ul {
@@ -43,7 +106,7 @@
     list-style-position: outside;
     padding-left: 17px;
     height: 147px;
-    color: black;
+    color: var(--theme-menu-icon-color);
     text-transform: uppercase;
   }
 
@@ -54,11 +117,10 @@
   }
   .li-style-down {
     list-style-type: disclosure-open;
-  } 
+  }
 
   .margin-pullback {
     margin-top: -205px;
-    visibility: hidden;
   }
 
   nav {
@@ -89,11 +151,11 @@
   .design-menu {
     margin-top: 2px;
     border-style: solid;
-    box-shadow: 0 4px 4px 0 rgba(182, 182, 182, 0.8);
     position: sticky;
-    background-color: #dddddd;
+    background-color: var(--theme-menu-bg-color);
     top: 0px;
     padding: 2px;
+    box-shadow: 0 2px 4px 0 rgba(182, 182, 182, 0.5);
   }
 
   ul {
@@ -103,6 +165,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
   }
 
   li {
@@ -115,7 +178,6 @@
 
   .margin-pullback {
     margin-top: -20px;
-    visibility: hidden;
   }
 
   nav {
@@ -159,11 +221,11 @@ hr {
   margin-block-end: 10px;
   margin-right: 200px;
   border: none;
-  border-top: 2px solid black;
+  border-top: 2px solid var(--theme-hr-color);
 }
 
 p {
-  font-size: 15px;
+  font-size: 1em;
   font-family: "Times New Roman", Times, serif;
   line-height: 120%;
   margin-block-start: 20px;
@@ -172,11 +234,11 @@ p {
 
 a:link,
 a:visited {
-  color: #005090;
+  color: var(--theme-a-visited-color);
 }
 
 a:hover {
-  color: #700b0b;
+  color: var(--theme-a-hover-color);
   text-decoration: none;
   transition: 0.5s;
   transition-timing-function: ease-in-out;
@@ -204,25 +266,25 @@ h4 {
 }
 
 .sign {
-  color: white;
   font-style: italic;
   font-weight: bold;
   text-align: right;
-  background-color: #222222;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
 body {
-  background-color: #dddddd;
-  color: #222222;
+  background-color: var(--theme-bg-color);
+  color: var(--theme-color);
   margin-left: 10px;
   margin-right: 10px;
+  color-scheme: light;
 }
 
 form > div {
   margin-right: 0px;
   margin-top: 6px;
   margin-bottom: 6px;
+  display: flex;
 }
 
 div > input {
@@ -242,11 +304,11 @@ button {
 
 .design-form-images {
   margin: auto;
-  border: solid #dddddd 4px;
+  border: solid var(--theme-color) 4px;
 }
 
 .invert-background-color {
-  backdrop-filter: invert(0);
+  backdrop-filter: invert(1);
 }
 
 .invert-color {
@@ -259,7 +321,7 @@ button {
 }
 
 .important {
-  color: #ff5500;
+  color: var(--theme-important-color);
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
@@ -279,32 +341,19 @@ button {
 
 .design-main-title {
   border-radius: 10px;
-  background-color: #dddddd;
+  background-color: var(--theme-main-title-bg-color);
   border: solid;
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
 }
 
-.design-line-left {
-  margin-right: 0;
-  display: block;
-  top: 55px;
-  right: 122px;
-  width: 20px;
-  height: 100vw;
-  position: absolute;
-  background-color: black;
-  z-index: -1;
-}
-
 .design-form {
-  border: solid 4px;
-  border-radius: 4px;
+  border: solid 2px;
+  border-radius: 5px;
   width: 300px;
   height: 210px;
-  background-color: inherit;
-  padding: 2px;
+  padding: 5px;
   white-space: nowrap;
 }
 
@@ -318,11 +367,11 @@ button {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 163px;
+  width: 182px;
   right: 18px;
-  border-left: 10px double black;
-  border-right: 10px double black;
-  z-index: -2;
+  border-left: 10px double var(--theme-lines-color);
+  border-right: 10px double var(--theme-lines-color);
+  z-index: -20;
 }
 
 .display-flex {
@@ -347,4 +396,23 @@ button {
 
 .width-125px {
   width: 125px;
+}
+.max-height-1_5em {
+  max-height: 1.5em;
+}
+.max-height-2em {
+  max-height: 2em;
+}
+.floating-ph {
+  opacity: 0.9;
+  color: #495057;
+}
+.w-92 {
+  width: 92% !important;
+}
+.w-90 {
+  width: 90% !important;
+}
+.hr-hide {
+  border: none;
 }
