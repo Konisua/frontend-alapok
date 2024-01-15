@@ -19,7 +19,7 @@
     <title>A tej csodái!</title>
   </head>
 
-  <body>
+  <body onload="olvasasiSebessegKiir()">
     <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
@@ -332,7 +332,10 @@
         console.log("Olvasási sebesség: "+olvasasiSebesseg+" szó percenként.");
         console.log("A szöveg elolvasása: "+szovegHossza/olvasasiSebesseg+" percig tart!");
         console.log("Pontosabban: "+olvasasiIdoPerc+" percig és "+olvasasiIdoMasodperc+" másodpercig tart!");
-        return szovegHossza/olvasasiSebesseg;
+        return "Az oldal elolvasása: "+olvasasiIdoPerc+" percig és "+olvasasiIdoMasodperc+" másodpercig tart átlagos ( "+olvasasiSebesseg+" ) szó/perc olvasási sebességgel!";
+      }
+      function olvasasiSebessegKiir(celElem ="#olvasasi-ido") {
+        document.querySelector(celElem).innerText = szoSzamlalo();
       }
     </script>
   </body>
