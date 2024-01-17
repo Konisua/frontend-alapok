@@ -19,11 +19,28 @@
     <title>A tej csodái!</title>
   </head>
 
-  <body>
+  <body onload="olvasasiSebessegKiir()">
     <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
-      <div class="width-125px"></div>
+      <div class="">
+        <form action="">
+          <div>
+            <label class="form-label mb-0" for="search-input">Keresés:</label>
+            <br />
+            <input
+              class="form-control d-sm-inline-block max-height-2em"
+              type="text"
+              name="search"
+              id="search-input"
+              oninput="idozitettKereses()"
+              onclick="resetPage()"
+              placeholder="Klikk = reset"
+            />
+          </div>
+        </form>
+      </div>
+
       <h1>A TEJ</h1>
       <span class="design-dark-mode-switch width-125px">
         <label for="themeSwitch">Dark Mode</label>
@@ -323,16 +340,78 @@
     <a id="oldal-alja"></a>
 
     <script>
-      function szoSzamlalo(szamolandoElem ="body",olvasasiSebesseg=250) {
+      function szoSzamlalo(szamolandoElem = "body", olvasasiSebesseg = 250) {
         let selectedElement = document.querySelector(szamolandoElem).innerText;
         let szovegHossza = selectedElement.split(/\s+/).length;
-        let olvasasiIdoPerc = Math.floor(szovegHossza/olvasasiSebesseg);
-        let olvasasiIdoMasodperc = (szovegHossza%olvasasiSebesseg);
-        console.log("A szöveg hossza: "+szovegHossza+" szó.");
-        console.log("Olvasási sebesség: "+olvasasiSebesseg+" szó percenként.");
-        console.log("A szöveg elolvasása: "+szovegHossza/olvasasiSebesseg+" percig tart!");
-        console.log("Pontosabban: "+olvasasiIdoPerc+" percig és "+olvasasiIdoMasodperc+" másodpercig tart!");
-        return szovegHossza/olvasasiSebesseg;
+        let olvasasiIdoPerc = Math.floor(szovegHossza / olvasasiSebesseg);
+        let olvasasiIdoMasodperc = szovegHossza % olvasasiSebesseg;
+        console.log("A szöveg hossza: " + szovegHossza + " szó.");
+        console.log(
+          "Olvasási sebesség: " + olvasasiSebesseg + " szó percenként."
+        );
+        console.log(
+          "A szöveg elolvasása: " +
+            szovegHossza / olvasasiSebesseg +
+            " percig tart!"
+        );
+        console.log(
+          "Pontosabban: " +
+            olvasasiIdoPerc +
+            " percig és " +
+            olvasasiIdoMasodperc +
+            " másodpercig tart!"
+        );
+        return (
+          "Az oldal elolvasása: " +
+          olvasasiIdoPerc +
+          " percig és " +
+          olvasasiIdoMasodperc +
+          " másodpercig tart átlagos ( " +
+          olvasasiSebesseg +
+          " ) szó/perc olvasási sebességgel!"
+        );
+      }
+    </script>
+    <script>
+      function olvasasiSebessegKiir(celElem = "#olvasasi-ido") {
+        document.querySelector(celElem).innerText = szoSzamlalo();
+      }
+    </script>
+    <script>
+      const eredetiOldal = document.body.innerHTML;
+      function resetPage() {
+        document.body.innerHTML = eredetiOldal;
+        document.querySelector("#search-input").focus();
+        olvasasiSebessegKiir();
+      }
+
+      let timeoutElem;
+      function idozitettKereses(inputElem = "#search-input") {
+        clearTimeout(timeoutElem); // Előző időzítés törlése
+        if (document.querySelector(inputElem).value.length == 0) {
+          // ha üres a kereső visszaáll az eredeti oldal
+          resetPage();
+        }
+        timeoutElem = setTimeout(function () {
+          let keresoSzo = document.querySelector(inputElem).value;
+          let nodeok = document.querySelectorAll("h1, h2, h3, h4, p");
+
+          for (let i = 0; i < nodeok.length; i++) {
+            if (
+              nodeok[i].textContent.includes(keresoSzo) &&
+              document.querySelector(inputElem).value.length > 0
+            ) {
+              let regiSzoveg = nodeok[i].innerHTML;
+              let ujSzoveg = regiSzoveg.replace(
+                new RegExp(keresoSzo, "g"),
+                "<span style='background-color: yellow'>" +
+                  keresoSzo +
+                  "</span>"
+              );
+              nodeok[i].innerHTML = ujSzoveg;
+            }
+          }
+        }, 1000); // 1 másodperc késleltetés
       }
     </script>
   </body>
