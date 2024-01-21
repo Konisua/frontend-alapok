@@ -26,10 +26,12 @@
       <div class="">
         <form action="">
           <div>
-            <label class="form-label mb-0" for="search-input">Keresés:</label>
+            <label class="form-label mb-0 searchLabel-style" for="search-input"
+              >Keresés:</label
+            >
             <br />
             <input
-              class="form-control d-sm-inline-block max-height-2em"
+              class="form-control d-sm-inline-block max-height-2em w-7em"
               type="text"
               name="search"
               id="search-input"
@@ -389,17 +391,17 @@
       function idozitettKereses(inputElem = "#search-input") {
         clearTimeout(timeoutElem); // Előző időzítés törlése
         if (document.querySelector(inputElem).value.length == 0) {
-          // ha üres a kereső visszaáll az eredeti oldal
+          // ha üres a kereső (pl: visszatörölte a felhasználó) visszaáll az eredeti oldal
           resetPage();
         }
         timeoutElem = setTimeout(function () {
           let keresoSzo = document.querySelector(inputElem).value;
-          let nodeok = document.querySelectorAll("h1, h2, h3, h4, p");
+          let nodeok = document.querySelectorAll("h1, h2, h3, h4, p"); // a cikk szövegét tartalmazó elemek
 
           for (let i = 0; i < nodeok.length; i++) {
             if (
               nodeok[i].textContent.includes(keresoSzo) &&
-              document.querySelector(inputElem).value.length > 0
+              document.querySelector(inputElem).value.length > 0 //csak akkor csinálja ha legalább egy karakter van a keresőben
             ) {
               let regiSzoveg = nodeok[i].innerHTML;
               let ujSzoveg = regiSzoveg.replace(
