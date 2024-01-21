@@ -416,5 +416,19 @@
         }, 1000); // 1 másodperc késleltetés
       }
     </script>
+
+    <script>
+      async function adatLekeres() {
+        try {
+          let felhasznalok = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+          ).then((response) => response.json());
+          let veletlenIndex = Math.floor(Math.random() * felhasznalok.length);
+          console.log(felhasznalok[veletlenIndex].company.name); // véletlen user cégének a neve kiir consolba
+        } catch (hiba) {
+          console.error("Hiba történt: ", hiba);
+        }
+      }
+    </script>
   </body>
 </html>
