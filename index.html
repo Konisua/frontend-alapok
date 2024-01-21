@@ -19,7 +19,7 @@
     <title>A tej csodái!</title>
   </head>
 
-  <body onload="olvasasiSebessegKiir()">
+  <body>
     <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
@@ -205,6 +205,7 @@
       </p>
     </section>
     <article
+      id="cikk"
       title="Miért nem alszik meg a tej"
       class="margin-right-media-changed"
     >
@@ -342,27 +343,18 @@
     <a id="oldal-alja"></a>
 
     <script>
+      window.onload = function () {
+        szerzoBeszuro();
+        olvasasiSebessegKiir();
+      };
+    </script>
+
+    <script>
       function szoSzamlalo(szamolandoElem = "body", olvasasiSebesseg = 250) {
         let selectedElement = document.querySelector(szamolandoElem).innerText;
         let szovegHossza = selectedElement.split(/\s+/).length;
         let olvasasiIdoPerc = Math.floor(szovegHossza / olvasasiSebesseg);
         let olvasasiIdoMasodperc = szovegHossza % olvasasiSebesseg;
-        console.log("A szöveg hossza: " + szovegHossza + " szó.");
-        console.log(
-          "Olvasási sebesség: " + olvasasiSebesseg + " szó percenként."
-        );
-        console.log(
-          "A szöveg elolvasása: " +
-            szovegHossza / olvasasiSebesseg +
-            " percig tart!"
-        );
-        console.log(
-          "Pontosabban: " +
-            olvasasiIdoPerc +
-            " percig és " +
-            olvasasiIdoMasodperc +
-            " másodpercig tart!"
-        );
         return (
           "Az oldal elolvasása: " +
           olvasasiIdoPerc +
@@ -374,6 +366,7 @@
         );
       }
     </script>
+    
     <script>
       function olvasasiSebessegKiir(celElem = "#olvasasi-ido") {
         document.querySelector(celElem).innerText = szoSzamlalo();
@@ -382,11 +375,13 @@
     <script>
       const eredetiOldal = document.body.innerHTML;
       function resetPage() {
-        document.body.innerHTML = eredetiOldal;
-        document.querySelector("#search-input").focus();
-        olvasasiSebessegKiir();
+        document.body.innerHTML = eredetiOldal; //kezdő oldal visszaáll
+        szerzoBeszuro(); // szerzőt újra beszúrjuk
+        document.querySelector("#search-input").focus(); // focus a keresőbe
+        olvasasiSebessegKiir(); //olvasási idő kiirás
       }
-
+    </script>
+    <script>
       let timeoutElem;
       function idozitettKereses(inputElem = "#search-input") {
         clearTimeout(timeoutElem); // Előző időzítés törlése
@@ -418,13 +413,37 @@
     </script>
 
     <script>
-      async function adatLekeres() {
+      async function szerzoBeszuro() {
         try {
           let felhasznalok = await fetch(
             "https://jsonplaceholder.typicode.com/users"
           ).then((response) => response.json());
           let veletlenIndex = Math.floor(Math.random() * felhasznalok.length);
-          console.log(felhasznalok[veletlenIndex].company.name); // véletlen user cégének a neve kiir consolba
+          let szerzoElem = document.createElement("p");
+          szerzoElem.innerHTML =
+            "<strong> Szerző: </strong>" + // az automata formázó nagyon erőszakos.. :D
+            felhasznalok[veletlenIndex].name +
+            "<br><strong> E-mail: </strong>" +
+            "<a href='mailto:" +
+            felhasznalok[veletlenIndex].email +
+            "'>" +
+            felhasznalok[veletlenIndex].email +
+            "</a>" +
+            "<br><strong> Telefon: </strong>" +
+            felhasznalok[veletlenIndex].phone +
+            "<br><strong> Cég neve: </strong>" +
+            felhasznalok[veletlenIndex].company.name;
+          szerzoElem.classList.add(
+            "border",
+            "border-secondary",
+            "p-1",
+            "rounded",
+            "bg-secondary",
+            "bg-gradient",
+            "bg-opacity-50",
+            "mt-1"
+          );
+          document.querySelector("#cikk").appendChild(szerzoElem);
         } catch (hiba) {
           console.error("Hiba történt: ", hiba);
         }
