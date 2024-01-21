@@ -193,6 +193,10 @@ header:has(span > #themeSwitch:checked) ~ .wrapper-image-form > img {
     display: flex;
     justify-content: space-evenly;
   }
+  #olvasasi-ido {
+    margin-top: 2em;
+    font-size: small;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -415,4 +419,8 @@ button {
 }
 .hr-hide {
   border: none;
+}
+
+#olvasasi-ido {
+  text-align: center;
 }
