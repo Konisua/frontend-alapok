@@ -23,7 +23,26 @@
     <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
-      <div class="width-125px"></div>
+      <div class="">
+        <form action="">
+          <div>
+            <label class="form-label mb-0 searchLabel-style" for="search-input"
+              >Keresés:</label
+            >
+            <br />
+            <input
+              class="form-control d-sm-inline-block max-height-2em w-7em"
+              type="text"
+              name="search"
+              id="search-input"
+              oninput="idozitettKereses()"
+              onclick="resetPage()"
+              placeholder="Klikk = reset"
+            />
+          </div>
+        </form>
+      </div>
+
       <h1>A TEJ</h1>
       <span class="design-dark-mode-switch width-125px">
         <label for="themeSwitch">Dark Mode</label>
@@ -63,13 +82,16 @@
 
     <hr class="margin-pullback no-margin-right hr-hide" />
     <section title="Bevezetés" class="margin-right-media-changed">
+      <div id="olvasasi-ido"></div>
       <p class="important">
         A legújabb magyar táplálkozási ajánlás szerint naponta fél liter tejet
         vagy ennek megfelelő tejterméket javasolt fogyasztani. <br />
         De melyik tejet igyuk, és mit jelentenek a különböző jelzések a
         tejesdobozokon? Ebben segítünk!
       </p>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         A tejben és tejtermékekben számos értékes tápanyag – fehérjék, zsírok,
         szénhidrátok, vitaminok és ásványi anyagok – található, melyekre a
         szervezetnek szüksége van, bizonyos összetevői (kalcium) pedig ebből az
@@ -78,7 +100,9 @@
         gyerekeknek az erős, egészséges fogak és a megfelelő csonttömeg
         kialakulása érdekében.
       </p>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         Fejés után a tejet azonnal lehűtik, hogy meggátolják a baktériumok
         szaporodását, majd a feldolgozás első lépéseként szűréssel vagy
         centrifugálással tisztítják. Ezután következik az előírt zsírtartalom
@@ -99,7 +123,9 @@
       <a id="oldal-navigacio-tartosito"></a>
       <h2>Tartósító eljárások</h2>
       <h3>Nyers tej</h3>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         A termelői nyers tehéntej közvetlen fogyasztásra szánt, teljes
         kifejéssel nyert, legfeljebb 40 °C hőmérsékletre melegített termék,
         amelyből semmit nem vontak el és nem adtak hozzá. A termelői nyers
@@ -109,7 +135,9 @@
         Fogyasztása előtt javasolt felforralni.
       </p>
       <h3>Pasztőrözött tej</h3>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         A pasztőrözés 100 °C alatti hőkezelést jelent, amely során a tejben a
         mikroorganizmusok számát olyan szintre csökkentik, hogy az már nem
         jelent egészségügyi kockázatot, és egyúttal a termék eltarthatóságát is
@@ -120,7 +148,9 @@
         kell a csíraölő hatás eléréséhez.)
       </p>
       <h3>ESL tej</h3>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         Az ESL (Extend Shelf Life) technológia gyakorlatilag a pasztőrözés és az
         ultrapasztőrözés között van. Olyan hőkezelés, amelynek során a tejet
         néhány pillanatig 100-135 °C közötti hőmérsékletre melegítik, majd
@@ -129,7 +159,9 @@
         igényelnek.
       </p>
       <h3>UHT tej</h3>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         Az UHT (Ultra Hight Temperature Treated Technology) kifejezés ultramagas
         hőmérsékleten történő hőkezelést jelent, melynek során a tejet 136-142
         °C hőmérsékleten 2-6 másodpercig hőkezelik, majd szobahőmérsékletre
@@ -140,7 +172,9 @@
         sokáig.
       </p>
       <h2>Mi az aszeptikus technológia?</h2>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         Az aszeptikus technológia a 20. század forradalmi találmánya. Ezért a
         találmányért kapta meg a Tetra Pak 1989-ben, az élelmiszeripari
         technológia területén az utóbbi ötven év legjelentősebb tudományos
@@ -160,7 +194,9 @@
     <section title="Homogenizálás" class="margin-right-media-changed">
       <a id="oldal-navigacio-homogenizalas"></a>
       <h2>Homogenizálás</h2>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         A homogenizálás folyamata során a tejet nagy nyomással átpréselik egy
         kis résen. Így a tejzsír kis elemekre törik össze, emulgált állapotban
         marad meg a tejben és nem jön fel a felszínre. A tej homogenizálásának
@@ -169,12 +205,15 @@
       </p>
     </section>
     <article
+      id="cikk"
       title="Miért nem alszik meg a tej"
       class="margin-right-media-changed"
     >
       <a id="oldal-navigacio-miertnem"></a>
       <h2>Miért nem alszik meg a bolti tej?</h2>
-      <p class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50">
+      <p
+        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
+      >
         Először is tisztázzuk mi is az az aludttej. A tej a tejben természetesen
         előforduló laktóbacilus törzsek áldásos tevékenységének hatására alszik
         meg. Vagyis a laktóbacilusok addig eszik a tejben lévő laktózt - vagyis
@@ -302,5 +341,113 @@
       <div class="sign">Készítette: Kupás Norbert</div>
     </footer>
     <a id="oldal-alja"></a>
+
+    <script>
+      window.onload = function () {
+        szerzoBeszuro();
+        olvasasiSebessegKiir();
+      };
+    </script>
+
+    <script>
+      function szoSzamlalo(szamolandoElem = "body", olvasasiSebesseg = 250) {
+        let selectedElement = document.querySelector(szamolandoElem).innerText;
+        let szovegHossza = selectedElement.split(/\s+/).length;
+        let olvasasiIdoPerc = Math.floor(szovegHossza / olvasasiSebesseg);
+        let olvasasiIdoMasodperc = szovegHossza % olvasasiSebesseg;
+        return (
+          "Az oldal elolvasása: " +
+          olvasasiIdoPerc +
+          " percig és " +
+          olvasasiIdoMasodperc +
+          " másodpercig tart átlagos ( " +
+          olvasasiSebesseg +
+          " ) szó/perc olvasási sebességgel!"
+        );
+      }
+    </script>
+    
+    <script>
+      function olvasasiSebessegKiir(celElem = "#olvasasi-ido") {
+        document.querySelector(celElem).innerText = szoSzamlalo();
+      }
+    </script>
+    <script>
+      const eredetiOldal = document.body.innerHTML;
+      function resetPage() {
+        document.body.innerHTML = eredetiOldal; //kezdő oldal visszaáll
+        szerzoBeszuro(); // szerzőt újra beszúrjuk
+        document.querySelector("#search-input").focus(); // focus a keresőbe
+        olvasasiSebessegKiir(); //olvasási idő kiirás
+      }
+    </script>
+    <script>
+      let timeoutElem;
+      function idozitettKereses(inputElem = "#search-input") {
+        clearTimeout(timeoutElem); // Előző időzítés törlése
+        if (document.querySelector(inputElem).value.length == 0) {
+          // ha üres a kereső (pl: visszatörölte a felhasználó) visszaáll az eredeti oldal
+          resetPage();
+        }
+        timeoutElem = setTimeout(function () {
+          let keresoSzo = document.querySelector(inputElem).value;
+          let nodeok = document.querySelectorAll("h1, h2, h3, h4, p"); // a cikk szövegét tartalmazó elemek
+
+          for (let i = 0; i < nodeok.length; i++) {
+            if (
+              nodeok[i].textContent.includes(keresoSzo) &&
+              document.querySelector(inputElem).value.length > 0 //csak akkor csinálja ha legalább egy karakter van a keresőben
+            ) {
+              let regiSzoveg = nodeok[i].innerHTML;
+              let ujSzoveg = regiSzoveg.replace(
+                new RegExp(keresoSzo, "g"),
+                "<span style='background-color: yellow'>" +
+                  keresoSzo +
+                  "</span>"
+              );
+              nodeok[i].innerHTML = ujSzoveg;
+            }
+          }
+        }, 1000); // 1 másodperc késleltetés
+      }
+    </script>
+
+    <script>
+      async function szerzoBeszuro() {
+        try {
+          let felhasznalok = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+          ).then((response) => response.json());
+          let veletlenIndex = Math.floor(Math.random() * felhasznalok.length);
+          let szerzoElem = document.createElement("p");
+          szerzoElem.innerHTML =
+            "<strong> Szerző: </strong>" + // az automata formázó nagyon erőszakos.. :D
+            felhasznalok[veletlenIndex].name +
+            "<br><strong> E-mail: </strong>" +
+            "<a href='mailto:" +
+            felhasznalok[veletlenIndex].email +
+            "'>" +
+            felhasznalok[veletlenIndex].email +
+            "</a>" +
+            "<br><strong> Telefon: </strong>" +
+            felhasznalok[veletlenIndex].phone +
+            "<br><strong> Cég neve: </strong>" +
+            felhasznalok[veletlenIndex].company.name;
+          szerzoElem.classList.add(
+            "border",
+            "border-secondary",
+            "p-1",
+            "rounded",
+            "bg-secondary",
+            "bg-gradient",
+            "bg-opacity-50",
+            "mt-1"
+          );
+          document.querySelector("#cikk").appendChild(szerzoElem);
+        } catch (hiba) {
+          console.error("Hiba történt: ", hiba);
+        }
+      }
+    </script>
   </body>
 </html>

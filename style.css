@@ -193,6 +193,10 @@ header:has(span > #themeSwitch:checked) ~ .wrapper-image-form > img {
     display: flex;
     justify-content: space-evenly;
   }
+  #olvasasi-ido {
+    margin-top: 2em;
+    font-size: small;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -413,6 +417,23 @@ button {
 .w-90 {
   width: 90% !important;
 }
+.w-7em {
+  width: 7em;
+}
 .hr-hide {
   border: none;
+}
+
+#olvasasi-ido {
+  text-align: center;
+}
+
+.searchLabel-style {
+  align-self: center;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+input::placeholder {
+  font-style: italic;
 }
