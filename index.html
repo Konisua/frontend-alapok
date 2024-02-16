@@ -23,7 +23,7 @@
     <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
-      <div class="">
+      <div class="d-flex align-items-center">
         <form action="">
           <div>
             <label class="form-label mb-0 searchLabel-style" for="search-input"
@@ -45,7 +45,7 @@
 
       <h1>A TEJ</h1>
       <span class="design-dark-mode-switch width-125px">
-        <label for="themeSwitch">Dark Mode</label>
+        <label for="themeSwitch">Dark Mode <br />"Alt + d"</label>
         <input type="checkbox" id="themeSwitch" class="big-checkbox" />
       </span>
     </header>
@@ -366,7 +366,7 @@
         );
       }
     </script>
-    
+
     <script>
       function olvasasiSebessegKiir(celElem = "#olvasasi-ido") {
         document.querySelector(celElem).innerText = szoSzamlalo();
@@ -426,7 +426,8 @@
             "<br><strong> E-mail: </strong>" +
             "<a href='mailto:" +
             felhasznalok[veletlenIndex].email +
-            "'>" +
+            "' " +
+            " tabindex='-1'>" +
             felhasznalok[veletlenIndex].email +
             "</a>" +
             "<br><strong> Telefon: </strong>" +
@@ -450,13 +451,28 @@
       }
     </script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXN2LL952K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZXN2LL952K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-ZXN2LL952K');
-</script>
+      gtag("config", "G-ZXN2LL952K");
+    </script>
+
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.altKey && event.key === "d") {
+          event.preventDefault();
+          document.getElementById("themeSwitch").checked =
+            !document.getElementById("themeSwitch").checked;
+        }
+      });
+    </script>
   </body>
 </html>
