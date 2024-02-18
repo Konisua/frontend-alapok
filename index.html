@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
+    <div class="not-compatible-size" role="alert" aria-label="Az ön képernyője nem támogatott felbontású.">NEM TÁMOGATOTT FELBONTÁS!</div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
       <div class="d-flex align-items-center">
@@ -29,9 +29,10 @@
             <label class="form-label mb-0 searchLabel-style" for="search-input"
               >Keresés:</label
             >
-            <br />
             <input
               class="form-control d-sm-inline-block max-height-2em w-7em"
+              role="searchbox"
+              aria-label="Keresés a cikkben"
               type="text"
               name="search"
               id="search-input"
@@ -46,39 +47,46 @@
       <h1>A TEJ</h1>
       <span class="design-dark-mode-switch width-125px">
         <label for="themeSwitch">Dark Mode <br />"Alt + d"</label>
-        <input type="checkbox" id="themeSwitch" class="big-checkbox" />
+        <input
+          type="checkbox"
+          id="themeSwitch"
+          class="big-checkbox"
+          role="checkbox"
+          aria-label="dark/light mode kapcsoló"
+        />
       </span>
     </header>
 
-    <div class="design-menu no-margin-right">
-      <nav>
+    <aside class="design-menu no-margin-right">
+      <nav role="navigation">
         <ul>
           <li>
-            <a href="#oldal-teteje">Oldal teteje</a>
+            <a href="#oldal-teteje" role="button">Oldal teteje</a>
           </li>
           <li>
-            <a href="#oldal-navigacio-tartosito"
-              >Tartósító <br />
-              eljárások</a
+            <a href="#oldal-navigacio-tartosito" role="button"
+              >Tartósító eljárások</a
             >
           </li>
           <li>
-            <a href="#oldal-navigacio-homogenizalas">Homogenizálás</a>
+            <a href="#oldal-navigacio-homogenizalas" role="button"
+              >Homogenizálás</a
+            >
           </li>
           <li>
-            <a href="#oldal-navigacio-miertnem"
+            <a href="#oldal-navigacio-miertnem" role="button"
               >Miért nem alszik meg a bolti tej?</a
             >
           </li>
           <li class="li-style-down">
-            <a href="trash.html">Szemétbe dobás</a>
+            <a href="trash.html" role="button">Szemétbe dobás</a>
           </li>
           <li>
-            <a href="#oldal-alja">Oldal alja</a>
+            <a href="#oldal-alja" role="button">Oldal alja</a>
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
 
     <hr class="margin-pullback no-margin-right hr-hide" />
     <section title="Bevezetés" class="margin-right-media-changed">
@@ -267,6 +275,8 @@
         <form
           action=""
           name="cikk-kuldese-ismerosnek"
+          role="form"
+          aria-label="Cikk küldése egy ismerősnek form"
           onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')"
         >
           <h4>Cikk küldése ismerősnek!</h4>
@@ -324,13 +334,14 @@
             <textarea
               class="form-control w-92 ms-auto me-auto"
               name="message"
+              aria-label="Az üzenet szövege mező"
               id="message-input"
               cols="30"
               rows="10"
             ></textarea>
           </div>
           <div>
-            <button class="btn btn-outline-primary h-auto" type="submit">
+            <button class="btn btn-outline-primary h-auto" type="submit" role="button">
               Küldés
             </button>
           </div>
@@ -421,7 +432,7 @@
           let veletlenIndex = Math.floor(Math.random() * felhasznalok.length);
           let szerzoElem = document.createElement("p");
           szerzoElem.innerHTML =
-            "<strong> Szerző: </strong>" + // az automata formázó nagyon erőszakos.. :D
+            "<strong> Szerző: </strong>" + 
             felhasznalok[veletlenIndex].name +
             "<br><strong> E-mail: </strong>" +
             "<a href='mailto:" +
@@ -444,6 +455,7 @@
             "bg-opacity-50",
             "mt-1"
           );
+          szerzoElem.setAttribute("title","Külső forrásból behúzott adatok");
           document.querySelector("#cikk").appendChild(szerzoElem);
         } catch (hiba) {
           console.error("Hiba történt: ", hiba);

@@ -259,6 +259,9 @@ a:hover {
 h1 {
   text-align: center;
   white-space: nowrap;
+  text-shadow: 2px 2px 5px var(--theme-important-color);
+  font-family: serif;
+  font-weight: bold;
 }
 
 h2 {
