@@ -274,10 +274,12 @@ h3 {
   margin-top: 15px;
 }
 
-h4 {
+.form-title {
   font-family: monospace;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
+  justify-content: center;
 }
 
 .sign {
