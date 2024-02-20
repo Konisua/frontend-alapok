@@ -448,3 +448,10 @@ button {
 input::placeholder {
   font-style: italic;
 }
+.bevezetesCim {
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+} 
