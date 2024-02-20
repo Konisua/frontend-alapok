@@ -6,103 +6,108 @@
     <meta name="author" content="Kupás Norbert" />
     <meta
       name="description"
-      content="Feladat gyakorlás a Frontend developer képzésre."
-    />
+      content="Feladat gyakorlás a Frontend developer képzésre." />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>A tej csodái!</title>
   </head>
 
   <body>
-    <div class="not-compatible-size">NEM TÁMOGATOTT FELBONTÁS!</div>
+    <div
+      class="not-compatible-size"
+      role="alert"
+      aria-label="Az ön képernyője nem támogatott felbontású.">
+      NEM TÁMOGATOTT FELBONTÁS!
+    </div>
     <a id="oldal-teteje"></a>
     <header class="design-main-title">
-      <div class="">
-        <form action="">
+      <div class="d-flex align-items-center">
+        <form>
           <div>
             <label class="form-label mb-0 searchLabel-style" for="search-input"
               >Keresés:</label
             >
-            <br />
             <input
               class="form-control d-sm-inline-block max-height-2em w-7em"
+              role="searchbox"
+              aria-label="Keresés a cikkben"
               type="text"
               name="search"
               id="search-input"
               oninput="idozitettKereses()"
               onclick="resetPage()"
-              placeholder="Klikk = reset"
-            />
+              placeholder="Klikk = reset" />
           </div>
         </form>
       </div>
 
       <h1>A TEJ</h1>
       <span class="design-dark-mode-switch width-125px">
-        <label for="themeSwitch">Dark Mode</label>
-        <input type="checkbox" id="themeSwitch" class="big-checkbox" />
+        <label for="themeSwitch">Dark Mode <br />"Alt + d"</label>
+        <input
+          type="checkbox"
+          id="themeSwitch"
+          class="big-checkbox"
+          aria-label="dark/light mode kapcsoló" />
       </span>
     </header>
 
-    <div class="design-menu no-margin-right">
+    <aside class="design-menu no-margin-right">
       <nav>
         <ul>
           <li>
-            <a href="#oldal-teteje">Oldal teteje</a>
+            <a href="#oldal-teteje" role="button">Oldal teteje</a>
           </li>
           <li>
-            <a href="#oldal-navigacio-tartosito"
-              >Tartósító <br />
-              eljárások</a
+            <a href="#oldal-navigacio-tartosito" role="button"
+              >Tartósító eljárások</a
             >
           </li>
           <li>
-            <a href="#oldal-navigacio-homogenizalas">Homogenizálás</a>
+            <a href="#oldal-navigacio-homogenizalas" role="button"
+              >Homogenizálás</a
+            >
           </li>
           <li>
-            <a href="#oldal-navigacio-miertnem"
+            <a href="#oldal-navigacio-miertnem" role="button"
               >Miért nem alszik meg a bolti tej?</a
             >
           </li>
           <li class="li-style-down">
-            <a href="trash.html">Szemétbe dobás</a>
+            <a href="trash.html" role="button">Szemétbe dobás</a>
           </li>
           <li>
-            <a href="#oldal-alja">Oldal alja</a>
+            <a href="#oldal-alja" role="button">Oldal alja</a>
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
 
     <hr class="margin-pullback no-margin-right hr-hide" />
     <section title="Bevezetés" class="margin-right-media-changed">
       <div id="olvasasi-ido"></div>
+      <h2 class="bevezetesCim">Bevezetés</h2>
       <p class="important">
         A legújabb magyar táplálkozási ajánlás szerint naponta fél liter tejet
-        vagy ennek megfelelő tejterméket javasolt fogyasztani. <br />
-        De melyik tejet igyuk, és mit jelentenek a különböző jelzések a
-        tejesdobozokon? Ebben segítünk!
+        vagy ennek megfelelő tejterméket javasolt fogyasztani. De melyik tejet
+        igyuk, és mit jelentenek a különböző jelzések a tejesdobozokon? Ebben
+        segítünk!
       </p>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        A tejben és tejtermékekben számos értékes tápanyag – fehérjék, zsírok,
-        szénhidrátok, vitaminok és ásványi anyagok – található, melyekre a
+      <p class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+        A tejben és tejtermékekben számos értékes tápanyag - fehérjék, zsírok,
+        szénhidrátok, vitaminok és ásványi anyagok - található, melyekre a
         szervezetnek szüksége van, bizonyos összetevői (kalcium) pedig ebből az
         élelmiszercsoportból hasznosulnak a legjobban. A tej és tejtermékek
         minden korcsoport számára ajánlottak, különösen a növekedésben lévő
         gyerekeknek az erős, egészséges fogak és a megfelelő csonttömeg
         kialakulása érdekében.
       </p>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
+      <p class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
         Fejés után a tejet azonnal lehűtik, hogy meggátolják a baktériumok
         szaporodását, majd a feldolgozás első lépéseként szűréssel vagy
         centrifugálással tisztítják. Ezután következik az előírt zsírtartalom
@@ -118,158 +123,150 @@
         Homogenizálás következtében a termék könnyebben emészthetővé is válik.
       </p>
     </section>
-
-    <section title="Tartósító eljárások" class="margin-right-media-changed">
-      <a id="oldal-navigacio-tartosito"></a>
-      <h2>Tartósító eljárások</h2>
-      <h3>Nyers tej</h3>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        A termelői nyers tehéntej közvetlen fogyasztásra szánt, teljes
-        kifejéssel nyert, legfeljebb 40 °C hőmérsékletre melegített termék,
-        amelyből semmit nem vontak el és nem adtak hozzá. A termelői nyers
-        tehéntej közvetlen fogyasztásra hűtés nélkül a fejés kezdetétől
-        számított 2 órán belül értékesíthető; vagy a fejés után 2 órán belül
-        legalább a tárolási hőmérsékletre, azaz 4-8 °C-ra kell hűteni.
-        Fogyasztása előtt javasolt felforralni.
-      </p>
-      <h3>Pasztőrözött tej</h3>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        A pasztőrözés 100 °C alatti hőkezelést jelent, amely során a tejben a
-        mikroorganizmusok számát olyan szintre csökkentik, hogy az már nem
-        jelent egészségügyi kockázatot, és egyúttal a termék eltarthatóságát is
-        meghosszabbítja. Tehéntej esetén ez általában 72-76 °C hőmérsékleten
-        15-40 másodpercig vagy ezzel egyenértékű más hőmérséklet-idő kombináció
-        szerinti hőkezelés, majd a legrövidebb időn belül legalább 6 oC-ra
-        történő hűtést jelent. (Minél nagyobb a hőmérséklet, annál rövidebb idő
-        kell a csíraölő hatás eléréséhez.)
-      </p>
-      <h3>ESL tej</h3>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        Az ESL (Extend Shelf Life) technológia gyakorlatilag a pasztőrözés és az
-        ultrapasztőrözés között van. Olyan hőkezelés, amelynek során a tejet
-        néhány pillanatig 100-135 °C közötti hőmérsékletre melegítik, majd
-        gyorsan lehűtik. Ennek következtében a tej élvezeti értéke nem csökken,
-        azonban az eltarthatósága 21-28 napra nő. Az ESL tejek hűtést
-        igényelnek.
-      </p>
-      <h3>UHT tej</h3>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        Az UHT (Ultra Hight Temperature Treated Technology) kifejezés ultramagas
-        hőmérsékleten történő hőkezelést jelent, melynek során a tejet 136-142
-        °C hőmérsékleten 2-6 másodpercig hőkezelik, majd szobahőmérsékletre
-        hűtve aszeptikusan (csíramentesen) csomagolják. Az UHT tejek nem
-        igénylenek hűtést, szobahőmérsékleten több hónapon át tárolhatóak. A
-        közhiedelemmel ellentétben nem tartalmaznak tartósítószert, pusztán a
-        speciális hőkezelésnek és csomagolásnak köszönhetően tarthatók el
-        sokáig.
-      </p>
-      <h2>Mi az aszeptikus technológia?</h2>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        Az aszeptikus technológia a 20. század forradalmi találmánya. Ezért a
-        találmányért kapta meg a Tetra Pak 1989-ben, az élelmiszeripari
-        technológia területén az utóbbi ötven év legjelentősebb tudományos
-        felfedezésének járó díjat. 1996-ban az amerikai elnökhelyettes, Al Gore
-        a Tetra Brik Aseptic csomagolásnak - amely a világ legelterjedtebb
-        kartoncsomagolása - az Aszeptikus Csomagolás Folyamatos Fejlődéséért
-        díjat adományozta. Az aszeptikus csomagolásba töltött élelmiszereket
-        szobahőmérsékleten lehet tárolni (feleslegessé válik a költséges hűtés a
-        szállítás, a rakodás és a raktározás során egyaránt), ráadásul sokkal
-        tovább eltarthatók, mint a pasztőrözött termékek. Az élelmiszereket – az
-        UHT kezelést követően - légmentesen zárt, aszeptikus gyártósorokon
-        töltik a steril dobozokba! Ez az eljárás megbízhatóan elpusztítja a
-        kórokozó baktériumokat és azok csíráit, de az élelmiszer tápértéke,
-        minősége és íze megmarad.
-      </p>
-    </section>
-    <section title="Homogenizálás" class="margin-right-media-changed">
-      <a id="oldal-navigacio-homogenizalas"></a>
-      <h2>Homogenizálás</h2>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        A homogenizálás folyamata során a tejet nagy nyomással átpréselik egy
-        kis résen. Így a tejzsír kis elemekre törik össze, emulgált állapotban
-        marad meg a tejben és nem jön fel a felszínre. A tej homogenizálásának
-        célja, hogy azt azok is könnyebben megemészthessék, akik bél- és
-        emésztőrendszeri problémákkal küzdenek.
-      </p>
-    </section>
-    <article
-      id="cikk"
-      title="Miért nem alszik meg a tej"
-      class="margin-right-media-changed"
-    >
-      <a id="oldal-navigacio-miertnem"></a>
-      <h2>Miért nem alszik meg a bolti tej?</h2>
-      <p
-        class="border border-secondary p-1 rounded bg-secondary bg-gradient bg-opacity-50"
-      >
-        Először is tisztázzuk mi is az az aludttej. A tej a tejben természetesen
-        előforduló laktóbacilus törzsek áldásos tevékenységének hatására alszik
-        meg. Vagyis a laktóbacilusok addig eszik a tejben lévő laktózt - vagyis
-        tejcukrot -, amíg a tej savanyú lesz*, és megalszik. Ez szoba
-        hőmérsékleten általában 1,5 - 2 nap alatt bekövetkezik. A végeredmény
-        pedig egy egészséges laktóbacilusokban gazdag, tejcukorban szegény és
-        így könnyen emészthető tejtermék. Nem érhető el leírás a fényképhez. És
-        hogy visszatérjünk az eredeti kérdésre miért nem alszik meg a bolti tej?
-        Mert a különböző tartósítási eljárások, pl az UHT vagy ESL elpusztítják
-        a tejben található természetes baktérium törzseket, így nincs amitől a
-        tej megaludjon. Ezért az UHT és ESL technológiával tartósított bolti
-        tej, ha meg is alszik nem a természetesen benne lévő laktóbacilusok
-        szaporodásának, hanem a levegőből, egyéb környezeti szennyezésből
-        belekerült baktérium törzsek szaporodásának köszönhető, ami általában
-        keserű ízt, rossz illatot, és fogyasztásra alkalmatlan - egészségtelen
-        végeredményt ad. A pasztőrözött tej egyébként általában tartalmaz kellő
-        számú laktóbacilust ahhoz, hogy abból aludttej készülhessen belőle. Ha a
-        tejben antibiotikum-maradványok vannak, az alvadás akkor sem jön létre,
-        hiszen ezek is a laktóbacilusok szaporodását gátolják, így tehát ez is
-        akadálya lehet annak, hogy aludttejet készítsünk. Ha mégis bolti tejből
-        szeretnénk aludttejet készíteni, az egyetlen biztos módja, hogy a tejhez
-        laktóbacilus kultúrákat adunk (sajtkészítési kellékeket árusító
-        boltokban, webáruházakban fagyasztva szárított formában kaphatóak), az
-        így "kultúrázott" tej 1 - 2 napon belül biztosan megalszik. De lehet
-        egyszerűbb felkeresni egy közeli piacot vagy farmot és ott beszerezni a
-        lehető legfrissebb nyers tejet, amihez már csak egy tiszta edényre,
-        szobahőmérsékletre és 1-2 nap türelemre lesz szükségünk, hogy
-        nagyanyáink egyik kedvencét az aludttejet fogyaszthassuk. Akinek pedig
-        nem jön be az aludttej savanykás íze, jellegzetes illata, annak
-        javaslom, hogy a tejföl (az aludttej tetején képződő zsíros réteg, ez az
-        igazi tejföl!!! ) eltávolítása után melegítse fel a maradék aludttejet,
-        míg azt látja, hogy pelyhekben kicsapódik belőle a fehérje (ez kb 80 -
-        85 fok, nem kell megvárni míg forr, mert akkor kifut) majd hagyjuk
-        nyugodtan lehűlni, utána egy apróbb lyukú szűrűn szűrjük le, és már
-        lehet is enni az igazi házi túrót!
-      </p>
-    </article>
+    <main>
+      <section title="Tartósító eljárások" class="margin-right-media-changed">
+        <a id="oldal-navigacio-tartosito"></a>
+        <h2>Tartósító eljárások</h2>
+        <h3>Nyers tej</h3>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          A termelői nyers tehéntej közvetlen fogyasztásra szánt, teljes
+          kifejéssel nyert, legfeljebb 40 °C hőmérsékletre melegített termék,
+          amelyből semmit nem vontak el és nem adtak hozzá. A termelői nyers
+          tehéntej közvetlen fogyasztásra hűtés nélkül a fejés kezdetétől
+          számított 2 órán belül értékesíthető; vagy a fejés után 2 órán belül
+          legalább a tárolási hőmérsékletre, azaz 4-8 °C-ra kell hűteni.
+          Fogyasztása előtt javasolt felforralni.
+        </p>
+        <h3>Pasztőrözött tej</h3>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          A pasztőrözés 100 °C alatti hőkezelést jelent, amely során a tejben a
+          mikroorganizmusok számát olyan szintre csökkentik, hogy az már nem
+          jelent egészségügyi kockázatot, és egyúttal a termék eltarthatóságát
+          is meghosszabbítja. Tehéntej esetén ez általában 72-76 °C
+          hőmérsékleten 15-40 másodpercig vagy ezzel egyenértékű más
+          hőmérséklet-idő kombináció szerinti hőkezelés, majd a legrövidebb időn
+          belül legalább 6 oC-ra történő hűtést jelent. (Minél nagyobb a
+          hőmérséklet, annál rövidebb idő kell a csíraölő hatás eléréséhez.)
+        </p>
+        <h3>ESL tej</h3>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          Az ESL (Extend Shelf Life) technológia gyakorlatilag a pasztőrözés és
+          az ultrapasztőrözés között van. Olyan hőkezelés, amelynek során a
+          tejet néhány pillanatig 100-135 °C közötti hőmérsékletre melegítik,
+          majd gyorsan lehűtik. Ennek következtében a tej élvezeti értéke nem
+          csökken, azonban az eltarthatósága 21-28 napra nő. Az ESL tejek hűtést
+          igényelnek.
+        </p>
+        <h3>UHT tej</h3>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          Az UHT (Ultra Hight Temperature Treated Technology) kifejezés
+          ultramagas hőmérsékleten történő hőkezelést jelent, melynek során a
+          tejet 136-142 °C hőmérsékleten 2-6 másodpercig hőkezelik, majd
+          szobahőmérsékletre hűtve aszeptikusan (csíramentesen) csomagolják. Az
+          UHT tejek nem igénylenek hűtést, szobahőmérsékleten több hónapon át
+          tárolhatóak. A közhiedelemmel ellentétben nem tartalmaznak
+          tartósítószert, pusztán a speciális hőkezelésnek és csomagolásnak
+          köszönhetően tarthatók el sokáig.
+        </p>
+        <h2>Mi az aszeptikus technológia?</h2>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          Az aszeptikus technológia a 20. század forradalmi találmánya. Ezért a
+          találmányért kapta meg a Tetra Pak 1989-ben, az élelmiszeripari
+          technológia területén az utóbbi ötven év legjelentősebb tudományos
+          felfedezésének járó díjat. 1996-ban az amerikai elnökhelyettes, Al
+          Gore a Tetra Brik Aseptic csomagolásnak - amely a világ
+          legelterjedtebb kartoncsomagolása - az Aszeptikus Csomagolás
+          Folyamatos Fejlődéséért díjat adományozta. Az aszeptikus csomagolásba
+          töltött élelmiszereket szobahőmérsékleten lehet tárolni (feleslegessé
+          válik a költséges hűtés a szállítás, a rakodás és a raktározás során
+          egyaránt), ráadásul sokkal tovább eltarthatók, mint a pasztőrözött
+          termékek. Az élelmiszereket - az UHT kezelést követően - légmentesen
+          zárt, aszeptikus gyártósorokon töltik a steril dobozokba! Ez az
+          eljárás megbízhatóan elpusztítja a kórokozó baktériumokat és azok
+          csíráit, de az élelmiszer tápértéke, minősége és íze megmarad.
+        </p>
+      </section>
+      <section title="Homogenizálás" class="margin-right-media-changed">
+        <a id="oldal-navigacio-homogenizalas"></a>
+        <h2>Homogenizálás</h2>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          A homogenizálás folyamata során a tejet nagy nyomással átpréselik egy
+          kis résen. Így a tejzsír kis elemekre törik össze, emulgált állapotban
+          marad meg a tejben és nem jön fel a felszínre. A tej homogenizálásának
+          célja, hogy azt azok is könnyebben megemészthessék, akik bél- és
+          emésztőrendszeri problémákkal küzdenek.
+        </p>
+      </section>
+      <article
+        id="cikk"
+        title="Miért nem alszik meg a tej"
+        class="margin-right-media-changed">
+        <a id="oldal-navigacio-miertnem"></a>
+        <h2>Miért nem alszik meg a bolti tej?</h2>
+        <p
+          class="border border-secondary p-1 rounded bg-gradient bg-opacity-50">
+          Először is tisztázzuk mi is az az aludttej. A tej a tejben
+          természetesen előforduló laktóbacilus törzsek áldásos tevékenységének
+          hatására alszik meg. Vagyis a laktóbacilusok addig eszik a tejben lévő
+          laktózt - vagyis tejcukrot -, amíg a tej savanyú lesz*, és megalszik.
+          Ez szoba hőmérsékleten általában 1,5 - 2 nap alatt bekövetkezik. A
+          végeredmény pedig egy egészséges laktóbacilusokban gazdag, tejcukorban
+          szegény és így könnyen emészthető tejtermék. Nem érhető el leírás a
+          fényképhez. És hogy visszatérjünk az eredeti kérdésre miért nem alszik
+          meg a bolti tej? Mert a különböző tartósítási eljárások, pl az UHT
+          vagy ESL elpusztítják a tejben található természetes baktérium
+          törzseket, így nincs amitől a tej megaludjon. Ezért az UHT és ESL
+          technológiával tartósított bolti tej, ha meg is alszik nem a
+          természetesen benne lévő laktóbacilusok szaporodásának, hanem a
+          levegőből, egyéb környezeti szennyezésből belekerült baktérium törzsek
+          szaporodásának köszönhető, ami általában keserű ízt, rossz illatot, és
+          fogyasztásra alkalmatlan - egészségtelen végeredményt ad. A
+          pasztőrözött tej egyébként általában tartalmaz kellő számú
+          laktóbacilust ahhoz, hogy abból aludttej készülhessen belőle. Ha a
+          tejben antibiotikum-maradványok vannak, az alvadás akkor sem jön
+          létre, hiszen ezek is a laktóbacilusok szaporodását gátolják, így
+          tehát ez is akadálya lehet annak, hogy aludttejet készítsünk. Ha mégis
+          bolti tejből szeretnénk aludttejet készíteni, az egyetlen biztos
+          módja, hogy a tejhez laktóbacilus kultúrákat adunk (sajtkészítési
+          kellékeket árusító boltokban, webáruházakban fagyasztva szárított
+          formában kaphatóak), az így "kultúrázott" tej 1 - 2 napon belül
+          biztosan megalszik. De lehet egyszerűbb felkeresni egy közeli piacot
+          vagy farmot és ott beszerezni a lehető legfrissebb nyers tejet, amihez
+          már csak egy tiszta edényre, szobahőmérsékletre és 1-2 nap türelemre
+          lesz szükségünk, hogy nagyanyáink egyik kedvencét az aludttejet
+          fogyaszthassuk. Akinek pedig nem jön be az aludttej savanykás íze,
+          jellegzetes illata, annak javaslom, hogy a tejföl (az aludttej tetején
+          képződő zsíros réteg, ez az igazi tejföl!!! ) eltávolítása után
+          melegítse fel a maradék aludttejet, míg azt látja, hogy pelyhekben
+          kicsapódik belőle a fehérje (ez kb 80 - 85 fok, nem kell megvárni míg
+          forr, mert akkor kifut) majd hagyjuk nyugodtan lehűlni, utána egy
+          apróbb lyukú szűrűn szűrjük le, és már lehet is enni az igazi házi
+          túrót!
+        </p>
+      </article>
+    </main>
     <div class="vertical-line no-margin-right"></div>
     <div class="wrapper-image-form margin-right-media-changed">
       <img
         class="design-form-images rounded-start-pill"
         src="tej02.jpg"
-        alt="17 db különféle dobozos és üveges tej lefektetve egy asztalra egymás mellé, két sorban."
-      />
+        alt="17 db különféle dobozos és üveges tej lefektetve egy asztalra egymás mellé, két sorban." />
       <img
         class="design-form-images rounded-end-pill"
         src="tej01.jpg"
-        alt="Egy pohár tej, 5 doboz tejjel a háttérben."
-      />
+        alt="Egy pohár tej, 5 doboz tejjel a háttérben." />
       <div class="design-form h-auto">
         <form
-          action=""
           name="cikk-kuldese-ismerosnek"
-          onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')"
-        >
-          <h4>Cikk küldése ismerősnek!</h4>
+          aria-label="Cikk küldése egy ismerősnek form"
+          onsubmit="return confirm('Biztosan el szerretnéd küldeni az adatokat?')">
+          <div class="form-title">Cikk küldése ismerősnek!</div>
           <div>
             <label class="form-label mb-0" for="name-input">Név:</label>
             <input
@@ -279,8 +276,7 @@
               id="name-input"
               placeholder="pl: Jakab pista"
               required
-              minlength="4"
-            />
+              minlength="4" />
           </div>
           <div>
             <label class="form-label mb-0" for="phonenumber-input"
@@ -291,8 +287,7 @@
               type="tel"
               name="phonenumber"
               id="phonenumber-input"
-              placeholder="+36102345678"
-            />
+              placeholder="+36102345678" />
           </div>
           <div>
             <label class="form-label mb-0" for="email-input">E-mail:</label>
@@ -302,8 +297,7 @@
               name="email"
               id="email-input"
               placeholder="valaki@valami.hu"
-              required
-            />
+              required />
           </div>
           <div>
             <label class="form-label mb-0" for="age-input">Kora:</label>
@@ -314,8 +308,7 @@
               id="age-input"
               min="0"
               max="120"
-              placeholder="min:0 - max:120"
-            />
+              placeholder="min:0 - max:120" />
           </div>
           <div class="form-floating">
             <label class="w-100 floating-ph pt-1 ps-3" for="message-input"
@@ -324,15 +317,13 @@
             <textarea
               class="form-control w-92 ms-auto me-auto"
               name="message"
+              aria-label="Az üzenet szövege mező"
               id="message-input"
               cols="30"
-              rows="10"
-            ></textarea>
+              rows="10"></textarea>
           </div>
           <div>
-            <button class="btn btn-outline-primary h-auto" type="submit">
-              Küldés
-            </button>
+            <button class="btn btn-primary h-auto" type="submit">Küldés</button>
           </div>
         </form>
       </div>
@@ -366,7 +357,7 @@
         );
       }
     </script>
-    
+
     <script>
       function olvasasiSebessegKiir(celElem = "#olvasasi-ido") {
         document.querySelector(celElem).innerText = szoSzamlalo();
@@ -421,12 +412,13 @@
           let veletlenIndex = Math.floor(Math.random() * felhasznalok.length);
           let szerzoElem = document.createElement("p");
           szerzoElem.innerHTML =
-            "<strong> Szerző: </strong>" + // az automata formázó nagyon erőszakos.. :D
+            "<strong> Szerző: </strong>" +
             felhasznalok[veletlenIndex].name +
             "<br><strong> E-mail: </strong>" +
             "<a href='mailto:" +
             felhasznalok[veletlenIndex].email +
-            "'>" +
+            "' " +
+            " tabindex='-1'>" +
             felhasznalok[veletlenIndex].email +
             "</a>" +
             "<br><strong> Telefon: </strong>" +
@@ -438,11 +430,12 @@
             "border-secondary",
             "p-1",
             "rounded",
-            "bg-secondary",
+            "",
             "bg-gradient",
             "bg-opacity-50",
             "mt-1"
           );
+          szerzoElem.setAttribute("title", "Külső forrásból behúzott adatok");
           document.querySelector("#cikk").appendChild(szerzoElem);
         } catch (hiba) {
           console.error("Hiba történt: ", hiba);
@@ -450,13 +443,27 @@
       }
     </script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXN2LL952K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZXN2LL952K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-ZXN2LL952K');
-</script>
+      gtag("config", "G-ZXN2LL952K");
+    </script>
+
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.altKey && event.key === "d") {
+          event.preventDefault();
+          document.getElementById("themeSwitch").checked =
+            !document.getElementById("themeSwitch").checked;
+        }
+      });
+    </script>
   </body>
 </html>
