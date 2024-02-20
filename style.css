@@ -339,15 +339,13 @@ button {
 
 .important {
   color: var(--theme-important-color);
-  font-size: 20px;
+  font-size: 1.5em;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 1.5em;
+  line-height: 1em;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-thickness: 5px;
-  text-decoration-skip-ink: none;
+  
   text-transform: uppercase;
   text-shadow: 1px 2px 2px black;
 }
